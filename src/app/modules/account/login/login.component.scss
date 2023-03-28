@@ -1,0 +1,87 @@
+body {
+    margin: 0px;
+}
+.main {
+    .center {
+        background-color: white;
+        .head {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+
+        .btn2 {
+            margin-left: 5px;
+            margin-right: 5px;
+            button {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: none;
+                width: 100%;
+                background-color: #26b4ff;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+
+        footer {
+            p {
+                text-align: center;
+                color: grey;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        .line {
+            border-bottom: 1px solid rgb(240, 240, 240);
+            margin-top: 10px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .main {
+        width: 70%;
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .head {
+        .appinventiv {
+            width: 180px;
+            margin-right: 100px;
+        }
+    }
+}
+@media screen and (max-width: 440px) {
+    .head {
+        .appinventiv {
+            width: 130px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .main {
+        .center {
+            .head {
+                .loginpage {
+                    .btn4 {
+                        margin-right: 60px;
+                    }
+                    ::ng-deep {
+                        .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+                            width: 180px;
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .mat-typography p {
+        margin: 0px;
+    }
+}

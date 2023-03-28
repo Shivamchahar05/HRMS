@@ -1,0 +1,125 @@
+<div class="new_request">
+    <div class="expansion">
+        <div>
+            <button (click)="new_request()">+Add new asset request</button>
+        </div>
+    </div>
+    <div class="next_expension" *ngIf="add_request">
+        <form>
+            <div class="second-grid">
+                <div>
+                    <label>Employee IdAi1610</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Unique Asset Code</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Serial Number </label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Model Number </label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>OS</label><br>
+                    <mat-form-field appearance="outline">
+                        <mat-select >
+                            <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                            <mat-option *ngFor="let priority of Priority"
+                                [value]="priority">
+                                {{priority}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>OS version</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Brand</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Colour</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Device is in working condition?</label><br>
+                    <mat-form-field appearance="outline">
+                        <mat-select >
+                            <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                            <mat-option *ngFor="let allocation_type of Allocation_type"
+                                [value]="allocation_type">
+                                {{allocation_type}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="asset_image">
+                <label>Asset Image(Allowed Format: jpg,jpeg,JPEG,JPG,png,PNG,GIF)<span>Upload front and backside image*</span>
+                </label><br>
+                <div class="file">
+                    <input type="file">
+                </div>
+            </div>
+            <div class="btn22">
+                <div>
+                    <button>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="main">
+    <div class="head">
+        <h1>List All Assets inventory</h1>
+    </div>
+    <div class="center">
+        <div class="search">
+            <div class="show">
+                <span>Show</span>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <mat-option value="10">10</mat-option>
+                        <mat-option value="25">25</mat-option>
+                        <mat-option value="50">50</mat-option>
+                        <mat-option value="100">100</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <span>entries</span>
+            </div>
+            <div>
+                <span>Search:</span>
+                <mat-form-field appearance="outline">
+                    <input matInput required value="" placeholder="Search by assets name">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div>
+            <section class="table">
+                <app-table [columns]="headings" [dataSource]="datasource" >hiiiii</app-table>
+            </section>
+        </div>
+    </div>
+</div>

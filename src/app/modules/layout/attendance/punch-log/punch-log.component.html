@@ -1,0 +1,37 @@
+<div class="main">
+    <div class="employee_detail">
+        <div class="tag">
+            <h1>Punch Log</h1>
+        </div>
+        <div class="inputs_details">
+            <div>
+                <label>Date</label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <label>Company</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <!-- <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off"> -->
+                        <mat-option *ngFor="let allocation_type of Allocation_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="btn22">
+                <button>Get</button>
+            </div>
+        </div>
+    </div>
+    <div class="munal_punch">
+        <div class="add_new">
+            <h2>Punch Log</h2> 
+        </div>
+        <div>
+            <app-table [columns]="headings" [dataSource]="datasource">hiiiii</app-table>
+        </div>
+    </div>
+</div>

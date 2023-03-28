@@ -1,0 +1,95 @@
+<div>
+    <div class="second_card">
+        <div class="addleave">
+            <h2>Create New Ticket</h2>
+            <button class="add" (click)="add_leave()">+Add New</button>
+        </div>
+        <div *ngIf="addleave" class="input_leaves">
+            <div class="input_editor">
+                <div>
+                    <div class="remaks">
+                        <label>Subject</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Subject</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="leave_type">
+                        <label>Department</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                                <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type" aria-placeholder="Department">
+                                    {{allocation_type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="leave_type">
+                        <label>Ticket Category</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                                <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type" aria-placeholder="Ticket Category">
+                                    {{allocation_type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="leave_type">
+                        <label>Priority</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                                <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type" aria-placeholder="Priority">
+                                    {{allocation_type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div>
+                    <label>Ticket Description</label>
+                    <div>
+                        <editor [init]="{
+                        height: 400,
+                        menubar: false,
+                         toolbar:
+                          '  bold italic underline alignleft aligncenter alignright alignjustify '}"></editor>
+                    </div>
+                </div>
+            </div>
+            <div class="btn22">
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>List All Tickets</h2>
+        <div class="search">
+            <div>
+                <span>Show</span>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <mat-option value="10">10</mat-option>
+                        <mat-option value="25">25</mat-option>
+                        <mat-option value="50">50</mat-option>
+                        <mat-option value="100">100</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <span>entries</span>
+            </div>
+            <div>
+                <span>Search:</span>
+                <mat-form-field appearance="outline">
+                    <input matInput required value="">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <section class="table">
+            <app-table [columns]="headings" [dataSource]="datasource">hiiiii</app-table>
+        </section>
+    </div>
+</div>

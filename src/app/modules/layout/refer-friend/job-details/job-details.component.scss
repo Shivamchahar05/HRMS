@@ -1,0 +1,66 @@
+.main {
+    padding: 20px;
+    .job_details {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        .job {
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            justify-content: space-between;
+            .icon{
+                background-color: rgba(36, 116, 255, 0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // padding: 10px;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                
+            }
+        }
+        .details {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            column-gap: 20px;
+            .fixed_label{
+                display: flex;
+                label {
+                    font-family: "Lato";
+                    font-size: 14px;
+                    color: #606167;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    min-width: 160px;
+                    margin: 0 10px 0 0;
+                }
+            }
+            
+        }
+        .tech_skill ,.job_intro,.job_description ,.job_qualification{
+            border-bottom: 1px solid lightgrey;
+            margin-bottom: 20px;
+        }
+        .under_details{
+            padding: 20px;
+            background-color: #F4F8FF;
+        }
+        .skills{
+            display: grid;
+            grid-template-columns: 7% 7% 7%;
+        .btn22{
+            border: none;
+            button{
+                background-color: #F4F8FF;
+                padding: 8px;
+                border-radius: 5px;
+                border:none;
+            }
+        }
+    }
+        
+    }
+}

@@ -1,0 +1,86 @@
+<div class="main">
+    <span>Home ></span>&nbsp;
+    <span>Reviews ></span>&nbsp;
+    <span>Performance</span>
+    <h2>Performance</h2>
+    <div class="head">
+        <div>
+            <div class="user">
+                <img src="/assets/images.png">
+                <div>
+                    <h3>Shivam chahar</h3>
+                    <p>Software Engineer (Angular)</p>
+                    <button>0.10 YRS</button>
+                </div>
+            </div>
+            <div class="award_horns">
+                <div class="awards">
+                    <h4>AWARDS</h4>
+                    <h5>N/A</h5>
+                </div>
+                <div class="honour">
+                    <h4>HONOURS</h4>
+                    <h5>N/A</h5>
+                </div>
+            </div>
+        </div>
+        <div class="rating">
+             <div class="main_rating">
+                <h1>4.0</h1>
+                <div class="date">Jan 2021 - TILL NOW</div>
+             </div>
+             <div class="labal_skills">
+                <div class="tech_skill">
+                    <div>
+                        <p>Technical Skills</p>
+                        <h4>4.0</h4>
+                    </div>
+                </div>
+                <div class="tech_skill">
+                    <div>
+                        <p>Ownership of Delivery</p>
+                        <h4>4.1</h4>
+                    </div>
+                </div>
+                <div class="tech_skill">
+                    <div>
+                        <p>Teamwork</p>
+                        <h4>4.1</h4>
+                    </div>
+                </div>
+                <div class="tech_skill">
+                    <div>
+                        <p>Process Adherence</p>
+                        <h4>3.9</h4>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="footer">
+       <div class="btn22">
+           <button>Monthly Rating</button>
+       </div>
+       <div>
+        <div class="performance">
+            <h1>Monthly Performance Calendar</h1>
+            <div>
+                <label>Select Years:</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="marital_status">
+                        <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                        <mat-option>2022</mat-option>
+                        <mat-option>2023</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+           
+        </div>
+        <div class="month">
+            <div *ngFor="let month of months" class="month_under">
+                <h4>{{month}}</h4>
+            </div>
+        </div>
+       </div>
+    </div>
+</div>     

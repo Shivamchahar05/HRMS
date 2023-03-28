@@ -1,0 +1,72 @@
+<div>
+    <div class="main">
+        <h1>Employee Directory</h1>
+        <form [formGroup]="directort_search">
+            <div class="search_bar">
+                <div>
+                    <label>Name</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Search by name" formControlName="Search">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Department</label><br>
+                    <mat-form-field appearance="outline">
+                        <mat-select formControlName="DEPARTMENT">
+                            <!-- <input name="search" autocomplete="off"> -->
+                            <mat-option *ngFor="let gender of DEPARTMENTS " [value]="gender">
+                                {{gender}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <div class="btn">
+                        <button (click)="reset()">Reset</button>
+                        <button (click)="append()">
+                            <mat-icon>youtube_searched_for</mat-icon>Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div>
+            <div class="directory">
+                <div class="directories" *ngFor="let item of items">
+                    <div class="upper_background"></div>
+                    <div class="imges">
+                        <div class="setwidth">
+                            <div class="background_blue_img">
+                                <div class="img_box">
+                                    <img src="/assets/images.png">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="details">
+                        <h2>{{item.name}}</h2>
+                        <p>{{item.department}}- <span>{{item.post}}</span></p>
+                    </div>
+
+                    <div class="user_blue_hover"></div>
+                    <div>
+                        <span>
+                            <mat-icon>alternate_email</mat-icon>
+                        </span>
+                        <span>{{item.email}}</span>
+                    </div>
+                    <div>
+                        <span>
+                            <mat-icon>cake</mat-icon>
+                        </span>
+                        <span>{{item.birthday}}</span>
+                    </div>
+                    <div class="blue_hover"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

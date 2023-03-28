@@ -1,0 +1,44 @@
+.btn1 {
+    .googlebtn {
+        display: flex;
+        background-color: #4285f4;
+        border: none;
+        margin-top: 70px;
+        box-shadow: 1px 1px 3px 1px rgb(189, 188, 188);
+        .google {
+            background-color: white;
+            height: 50px;
+            width: 50px;
+            margin-left: -5px;
+            img {
+                padding-top: 10px;
+                height: 30px;
+                width: 30px;
+            }
+            @media screen and (max-width: 480px) {
+        
+                
+                height: 56px;
+                img{
+                    height: 70px;
+                    width: 50px;
+                }
+
+                
+            }
+        }
+
+        p {
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            color: white;
+            font-size: 20px;
+        }
+    }
+    .email {
+        text-align: center;
+        color: grey;
+        margin-top: 26px;
+    }
+}

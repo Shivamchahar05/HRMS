@@ -1,0 +1,46 @@
+<div>
+    <h1>Training</h1>
+</div>
+<div class="main_first">
+    <div *ngFor="let training of upcoming_training">
+        <div class="main">
+            <div class="hiii">
+                <div class="head">
+                    <div class="opening_img">
+                        <img src="{{training.img_url}}">
+                    </div>
+                </div>
+                <div class="tittle">
+                    <h2>{{training.training_title}}</h2>
+                    <!-- <p>{{training.process}}</p> -->
+                </div>
+                <hr>
+                <div class="attend">
+                    <p>Who can attend</p>
+                    <h2>{{training.department}}</h2>
+                </div>
+                <div class="opening">
+                    <div>
+                        <p>Start Date</p>
+                        <h2>{{training.start_date}}</h2>
+                    </div>
+                    <div>
+                        <p>End Date</p>
+                        <h2>{{training.end_date}}</h2>
+                    </div>
+                    <div>
+                        <p>Seats</p>
+                        <h2>{{count_seats}}</h2>
+                    </div>
+                </div>
+                <hr>
+                <div class="btn22">
+                    <button>View Details</button>
+                    <button (click)="enroll()" *ngIf="enroll_training">Enroll Training</button>
+                    <button class="cancel" *ngIf="!enroll_training" (click)="cancel_enroll()">Cancel Enrollment</button>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

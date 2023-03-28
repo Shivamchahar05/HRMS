@@ -1,0 +1,23 @@
+.header{
+    h1{
+        color: #199CFF;
+    }
+}
+.main{
+    border: 1px solid lightgray;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    .option{
+        margin-left: 20px;
+    }
+    
+}
+::ng-deep {
+    .mat-form-field {
+        width: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

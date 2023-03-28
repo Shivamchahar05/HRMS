@@ -1,0 +1,33 @@
+<div class="main">
+    <div class="head" >
+        <h1>List All Assets inventory</h1>
+    </div>
+    <div class="center">
+        <div class="search">
+            <div class="show">
+                <span>Show</span>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <mat-option value="10">10</mat-option>
+                        <mat-option value="25">25</mat-option>
+                        <mat-option value="50">50</mat-option>
+                        <mat-option value="100">100</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <span>entries</span>
+            </div>
+            <div>
+                <span>Search:</span>
+                <mat-form-field appearance="outline">
+                    <input matInput required value="" placeholder="Search by assets name">
+                </mat-form-field>
+            </div>
+        </div>
+    
+        <div>
+            <section class="table">
+                <app-table [columns]="headings" [dataSource]="datasource" [TableClass]="'all_assets'">hiiiii</app-table>
+             </section>
+        </div>
+    </div>
+</div>

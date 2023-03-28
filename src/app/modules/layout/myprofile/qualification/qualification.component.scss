@@ -1,0 +1,142 @@
+.right_center{
+    background-color: white;
+    width: 100%;
+    h2 {
+        padding: 20px;
+        color: blue;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(235, 234, 234);
+    }
+    .Input-fields {
+        padding: 25px;
+        .first-grid {
+            display: grid;
+            grid-template-columns: auto auto ;
+            column-gap: 10px;
+            ::ng-deep {
+                .mat-form-field {
+                    width: 500px;
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                display: grid;
+                grid-template-columns: auto  ;
+              }
+              @media screen and (max-width: 700px) {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 350px;
+                    }
+                }
+              }
+              @media screen and (max-width: 500px) {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 250px;
+                    }
+                }
+              }
+        }
+        // .second-grid {
+        //     display: grid;
+        //     grid-template-columns: auto auto auto;
+        //     column-gap: 10px;
+        //     ::ng-deep {
+        //         .mat-form-field {
+        //             width: 500px;
+        //         }
+        //     }
+        // }
+        .dob {
+            position: relative;
+            .picker {
+                position: absolute;
+                right: 9px;
+                bottom: 8px;
+            }
+            .second-grid {
+                    display: grid;
+                    grid-template-columns: auto auto ;
+                    column-gap: 10px;
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 500px;
+                        }
+                    }
+                    @media screen and (max-width: 1200px) {
+                        display: grid;
+                        grid-template-columns: auto  ;
+                      }
+                      @media screen and (max-width: 700px) {
+                        ::ng-deep {
+                            .mat-form-field {
+                                width: 350px;
+                            }
+                        }
+                      }
+                      @media screen and (max-width: 500px) {
+                        ::ng-deep {
+                            .mat-form-field {
+                                width: 250px;
+                            }
+                        }
+                      }
+                }
+        }
+        .btn{
+            margin-top: 30px;
+            button{
+                background-color: #199CFF;
+                color: white;padding: 10px;
+                border: none;
+                border-radius: 5px;
+                // box-shadow: 1px 0px 0px 1px rgb(195, 193, 193);
+            }
+        }
+    }
+}
+.footer{
+    margin-top: 30px;
+    background-color: white;
+    width: 100%;
+    h2 {
+        padding: 20px;
+        color: blue;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(235, 234, 234);
+    }
+    .search{
+        margin: 20px;
+        
+        span{
+            margin-left: 5px;
+        }
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 600px) {
+            display: block;
+           
+          }
+    }
+    .table{
+       padding-bottom: 20px;
+        margin-right: 40px;
+        @media screen and (max-width: 600px) {
+            width: 50%;
+           
+          }
+    }
+}
+.example-full-width{
+    width: 99%;
+}
+::ng-deep{
+    .green-snackbar{
+        background-color: green !important;
+        color: #000;
+    }
+    .red-snackbar{
+        background-color: red !important;
+        color: #000;
+    }
+}

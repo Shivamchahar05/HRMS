@@ -1,0 +1,147 @@
+<div class="main">
+    <div class="first-header">
+        <div class="user-image">
+            <img src="/assets/images.png">
+        </div>
+        <div class="user-information">
+            <h1>Shivam chahar</h1>
+            <strong>Email : </strong><span>Shivam.chahar@appinventiv.com</span><br>
+            <strong>Employee ID: </strong><span>AI1610</span><br>
+            <strong>Designation : </strong><span>Software Engineer</span><br>
+            <strong>Last Login : </strong><span>Jan-31-2023 10:39 AM from 172.31.30.204</span><br>
+        </div>
+    </div>
+    <div class="center">
+        <div class="left-center">
+            <div class="basic-information">
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/basic-information">
+                    <mat-icon>account_circle</mat-icon>
+                    <p>Basic Information</p>
+                </a>
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/profile-picture">
+                    <mat-icon>add_a_photo</mat-icon>
+                    <p>Prof Picture</p>
+                </a>
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/qualification">
+                    <mat-icon>book</mat-icon>
+                    <p>Qualification</p>
+                </a>
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/shift">
+                    <mat-icon>camera</mat-icon>
+                    <p>Shift</p>
+                </a>
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/change-password">
+                    <mat-icon>key</mat-icon>
+                    <p>Change Password</p>
+                </a>
+                <a routerLinkActive="router-link-active" routerLink="/layout/my-profile/appraisal">
+                    <mat-icon>thumb_up_alt</mat-icon>
+                    <p>Appraisal</p>
+                </a>
+            </div>
+        </div>
+        <div class="router">
+            <router-outlet></router-outlet>
+            <!-- <h2>Basic Information</h2>
+            <div class="Input-fields">
+                <div class="first-grid">
+                    <div>
+                        <label>First Name</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="First Name" required value="Shivam">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Last Name</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="Last Name" required value="chahar">
+                        </mat-form-field>
+                    </div>
+                    <div class="dob">
+                        <label>Date of Birth</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput [matDatepicker]="dp3" disabled>
+                            <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+                            <mat-datepicker  #dp3 disabled="false"></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="second-grid">
+                    <div>
+                        <label>Gender</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                              <input  name="search" [(ngModel)]="searchText" autocomplete="off">
+                              <mat-option *ngFor="let gender of genders | searchFilter: searchText" [value]="gender.value">
+                                {{gender.value}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div >
+                        <label>Marital Status</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                            <input  type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                              <mat-option *ngFor="let Marital of Marital_Status | searchFilter: searchText" [value]="Marital.value">
+                                {{Marital.value}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Contact Number</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="Contact Number" required value="8755623618">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="third_grid">
+                   
+                    <div class="years">
+                        <label>Total Working Experience</label><br>
+                        <div>
+                            <label>Years</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="number" required >
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <label>Months</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="number" required >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="years">
+                        <label>Relevant Experience</label><br>
+                        <div > 
+                            <label>Years</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="number" required >
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <label>Months</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput type="number" required >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="address">
+                   <label>Address</label><br>
+                   <mat-form-field class="example-full-width" appearance="outline">
+                    <textarea matInput></textarea>
+                  </mat-form-field>
+                </div>
+                <div class="btn">
+                    <button>
+                        Save
+                    </button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

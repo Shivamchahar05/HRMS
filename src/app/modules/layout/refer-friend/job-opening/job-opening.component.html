@@ -1,0 +1,43 @@
+<div>
+    <h1>
+        Current Job Openings
+    </h1>
+</div>
+<div class="main_first">
+    <div *ngFor="let opening of openings">
+        <div class="main">
+            <div class="hiii">
+                <div class="head">
+                    <div class="opening_img">
+                        <img src="{{opening.img_url}}">
+                    </div>
+                    <div class="date_location">
+                        <div class="location">
+                            <mat-icon> add_location</mat-icon>{{opening.location}}
+                        </div>
+                        <p>08/02/2023</p>
+                    </div>
+                </div>
+                <h2>{{opening.job_title}}-{{opening.department}}</h2>
+                <p>{{opening.job_description}}</p>
+                <hr>
+                <div class="opening">
+                    <div>
+                        <p>No. of Openings</p>
+                        <h2>{{opening.openings_count}}</h2>
+                    </div>
+                    <div>
+                        <p>Experience</p>
+                        <h2>{{opening.job_experience_requried}}</h2>
+                    </div>
+                </div>
+                <hr>
+                <div class="btn22">
+                    <button (click)="view_details(opening)">View Details</button>
+                    <button (click)="openDialog(opening)">Refer a candidate</button>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</div>

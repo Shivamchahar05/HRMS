@@ -1,0 +1,63 @@
+.main {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 7%;
+    .objective {
+        padding-top: 10%;
+        padding-right: 20px;
+        h2 {
+            font-size: 25px;
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 0px;
+        }
+        .AI {
+            margin-bottom: 0px;
+        }
+        li {
+            margin-top: 20px;
+        }
+        .btn {
+            button {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199cff;
+                background-blend-mode: soft-light, normal;
+                border: 1px solid rgba(150, 165, 184, 0.2);
+                box-sizing: border-box;
+                box-shadow: 0px 1px 4px rgb(0 0 0 / 12%), inset 0px 2px 0px rgb(255 255 255 / 24%);
+                border-radius: 4px;
+                color: #ffffff;
+                padding: 7px;
+            }
+        }
+    }
+    .back_img {
+        position: relative;
+        .upper_img {
+            position: absolute;
+            // bottom: 60%;
+            bottom: 60%;
+            left: 100px;
+            img {
+                width: 550px;
+                box-shadow: 48px 16px 48px rgb(24 37 56 / 12%);
+                border-radius: 4px;
+                transform: perspective(1000px) rotateY(16deg) rotateX(2deg) rotateZ(-7deg) scaleY(0.95) translatex(2%);
+                @media screen and (max-width: 600px) {
+                    width:350px;
+                  }
+            }
+            @media screen and (max-width: 1500px) {
+                bottom: 77%;
+              }
+              @media screen and (max-width: 1200px) {
+                bottom: 86%;
+              }
+            
+            @media screen and (max-width: 600px) {
+                bottom: 92%;
+              }
+        }
+    }
+}

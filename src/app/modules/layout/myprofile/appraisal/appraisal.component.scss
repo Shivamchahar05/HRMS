@@ -1,0 +1,39 @@
+.right_center {
+    background-color: white;
+    // width: 100%;
+    h2 {
+        padding: 20px;
+        color: blue;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(235, 234, 234);
+    }
+    .Input-fields {
+        padding: 25px;
+        .first-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-right: 210px;
+            // column-gap: 10px;
+            ::ng-deep {
+                .mat-form-field {
+                    width: 366px;
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                display: grid;
+                grid-template-columns: auto  ;
+              }
+              @media screen and (max-width: 600px) {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 250px;
+                    }
+                }
+              }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        
+        width: 60%;
+      }
+}

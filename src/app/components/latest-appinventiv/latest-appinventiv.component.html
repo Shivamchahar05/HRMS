@@ -1,0 +1,46 @@
+<div class="awards_birthday">
+    <owl-carousel-o [options]="latest_appinventiv_customOptions">
+
+        <ng-template carouselSlide>
+            <div class="appreciate">
+                <app-appreciation></app-appreciation>
+            </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="awards">
+                <div class="dots">
+                    <mat-icon>fiber_manual_record</mat-icon>
+                    <h3>Awards</h3>
+                </div>
+                <h4>Dear</h4>
+                <div>
+                    <app-awards></app-awards>
+                </div>
+                <h4 class="spreading">keep spreading your awesomeness. Congratulation!</h4>
+                <h4 class="cheers">Cheers!</h4>
+                <h4 class="appinventiv">Appinventiv</h4>
+            </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+            <div class="birthday">
+                <div class="dots">
+                    <mat-icon>fiber_manual_record</mat-icon>
+                    <h3>Birthday Celebration</h3>
+                </div>
+                <h4>Dear</h4>
+                <div>
+                    <app-birthday></app-birthday>
+                </div>
+                <h4>
+                    On behalf of the entire company I wish you a very happy birthday and send you my best wishesh
+                    for
+                    much happiness in your life.
+                </h4>
+                <h4 class="cheers">Cheers!</h4>
+                <h4 class="appinventiv">Appinventiv</h4>
+            </div>
+        </ng-template>
+
+    </owl-carousel-o>
+</div>

@@ -1,0 +1,31 @@
+.main{
+    h1{
+        padding: 20px;
+        color: #199CFF;
+        font-weight: 600;
+    }
+    .center{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        .select{
+            display: grid;
+            grid-template-columns: 30% 30%;
+            ::ng-deep {
+                .mat-form-field {
+                    width: 366px;
+                }
+            }
+        }
+        .search{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+}
+.table{
+    background-color: white;
+    border-radius: 10px;
+   
+}

@@ -1,0 +1,44 @@
+.awards_birthday {
+    // justify-content: space-between;
+    // width: 100%;
+    // min-width: 800px
+    .appreciate{
+        margin-top: 20px;
+    }
+    .awards {
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        padding: 20px;
+        color: black !important;
+        // width: 300px;
+        .dots {
+            display: flex;
+        }
+        .spreading{
+            margin-top: 10px;
+        }
+        .cheers{
+            margin-top: 55px;
+        }
+        .appinventiv{
+            color: blue;
+        }
+    }
+    .birthday {
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        padding: 20px;
+        color: black !important;
+        margin-bottom: 10px;
+        .appinventiv{
+            color: blue;
+        }
+        
+        // height: 400px;// width: 300px;
+        .dots {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.main{
+    background-color: white;
+    border-radius: 10px;
+    .head{
+        border-bottom: 1px solid rgb(234, 231, 231);
+        h1{
+            padding: 10px;
+            margin-left: 20px;
+            margin-bottom: 0px;
+            color: blue;
+            font-weight: 500;
+        }
+    }
+    .center{
+        padding: 10px;
+        .search{
+            display: flex;
+            justify-content: space-between;
+            .show{
+                margin-left: 20px;
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 80px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

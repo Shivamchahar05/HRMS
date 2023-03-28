@@ -1,0 +1,102 @@
+<div class="right_center" *ngIf="show" [@slideInOut]>
+    <h2>Qualification</h2>
+    <form [formGroup]="qualification_form">
+    <div class="Input-fields">
+        <div class="first-grid">
+            <div>
+                <label>School/University</label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="" required value="" formControlName="School">
+                </mat-form-field>
+            </div>
+            <div>
+                <label>Education Level</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="education">
+                        <input name="search" autocomplete="off">
+                        <mat-option *ngFor="let qualification of qualifications"
+                            [value]="qualification.value">
+                            {{qualification.value}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <div class="dob">
+                <label>Time Period</label><br>
+                <div class="second-grid">
+                    <mat-form-field appearance="outline">
+                        <input matInput [matDatepicker]="dp4" formControlName="dp4">
+                        <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp4"></mat-datepicker-toggle>
+                        <mat-datepicker #dp4 disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <input matInput [matDatepicker]="dp3" formControlName="dp3">
+                        <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+                        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="first-grid">
+            <div>
+                <label>Language</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="Language">
+                        <input name="search"  autocomplete="off" formControlName="Language">
+                        <mat-option *ngFor="let qualification of qualifications"
+                            [value]="qualification.value">
+                            {{qualification.value}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <label>Professional Courses (if any)</label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Professional Courses (if any)" required value="" formControlName="Professional">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="address">
+            <label>Description</label><br>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <textarea matInput formControlName="address"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="btn">
+            <button (click)="save()">
+                Save
+            </button>
+        </div>
+    </div>
+    </form>
+</div>
+<div class="footer" *ngIf="show" [@slideInOut]>
+    <h2>List All Qualification</h2>
+    <div class="search">
+        <div>
+            <span>Show</span>
+            <mat-form-field appearance="outline">
+                <mat-select>
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="25">25</mat-option>
+                    <mat-option value="50">50</mat-option>
+                    <mat-option value="100">100</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <span>entries</span>
+        </div>
+        <div>
+            <span>Search:</span>
+            <mat-form-field appearance="outline">
+                <input matInput required value="">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <section class="table">
+       <app-table [columns]="headings" [dataSource]="datasource">hiiiii</app-table>
+    </section>
+</div>

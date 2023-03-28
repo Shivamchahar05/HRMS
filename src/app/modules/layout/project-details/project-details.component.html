@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="header">
+        <div>
+            <h1>Training Project React JS</h1>
+        </div>
+        <div class="tags">
+            <div class="label">
+                <h2>Project Tags/label</h2>
+                <mat-icon (click)="openDialog()">add_circle</mat-icon>
+            </div>
+            <div class="tag">
+                <div *ngFor="let add of tag">
+                        <h4>{{add}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <mat-tab-group>
+            <mat-tab label="Overview">
+                <app-overview></app-overview>
+            </mat-tab>
+            <mat-tab label="Notes">
+                <app-notes></app-notes>
+            </mat-tab>
+            <mat-tab label="DSR Reports">
+                <app-dsr-reports></app-dsr-reports>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

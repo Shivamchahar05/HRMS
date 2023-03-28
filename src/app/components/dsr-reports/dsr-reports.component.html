@@ -1,0 +1,124 @@
+<div class="main">
+    <div class="input_filters">
+        <h1>Filters</h1>
+        <div class="filters">
+            <div class="dob">
+                <label>Date from</label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput [matDatepicker]="dp5" formControlName="dp5">
+                    <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp5" ></mat-datepicker-toggle>
+                    <mat-datepicker #dp5 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="dob">
+                <label>Date to</label><br>
+                <mat-form-field appearance="outline">
+                    <input matInput [matDatepicker]="dp6" formControlName="dp6">
+                    <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp6" ></mat-datepicker-toggle>
+                    <mat-datepicker #dp6 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>Department</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search" autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>Project Resource</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>Submission Status</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search" autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>PM Approval Status</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>AM Approval Status</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>RM Approval Status</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>Final Approval Status</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="leave_type">
+                <label>Hours</label><br>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <input type="text" name="search"  autocomplete="off">
+                        <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                            {{allocation_type}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="btn22">
+                <button>Apply</button>
+                <button>Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="dsr_list">
+        <div>
+            <h2>DSR List</h2>
+        </div>
+        <div></div>
+        <section class="table">
+            <app-table [columns]="headings" [dataSource]="datasource" [TableClass]="'team_size'">hiiiii</app-table>
+        </section>
+    </div>
+</div>

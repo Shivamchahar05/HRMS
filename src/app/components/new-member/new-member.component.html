@@ -1,0 +1,15 @@
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let member of new_member">
+        <div class="head">
+            <div class="main">
+                <div class="card">
+                    <div>
+                        <img src="{{member.img_url}}">
+                    </div>
+                    <h2>{{member.name}}</h2>
+                    <p>{{member.department}}</p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>

@@ -1,0 +1,18 @@
+.header{
+    h1{
+        color: #199CFF;
+    }
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    h1{
+        font-size: 35px;
+    }
+}

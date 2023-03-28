@@ -1,0 +1,190 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    .outer {
+        display: flex;
+        justify-content: space-between;
+        .first-sidenav-container {
+            margin-top: 20px;
+            height: 60px;
+            a {
+                display: flex;
+                h1 {
+                    font-size: 30px;
+                    padding-top: 10px;
+                }
+                .imgdiv {
+                    height: 100px;
+                    img {
+                        height: 60px;
+                        margin-left: 10px;
+                    }
+                }
+                mat-icon {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .right-header {
+            margin-right: 50px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            .user-name {
+                display: flex;
+                h3 {
+                    color: rgb(56, 54, 54);
+                }
+                .user-image {
+                    height: 30px;
+                    margin-left: 10px;
+                    width: 30px;
+                    // border-radius: 50%;
+                    border: 1px solid lightgray;
+                    img {
+                        height: 20px;
+                        width: 20px;
+                        padding: 5px;
+                    }
+                }
+                .expand-more {
+                    margin-left: 10px;
+                    // margin-top: 10px;
+                    .menu {
+                        padding-top: 30px;
+                        ng::deep {
+                            .cdk-overlay-pane {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-help {
+                margin-left: 25px;
+                margin-top: px;
+                button {
+                    background-color: red;
+                    border: none;
+                    padding: 5px;
+                    height: 25px;
+                    font-size: 17px;
+                    // font-weight: 600px;
+                    color: white;
+                    border-radius: 2px;
+                }
+            }
+            .notification {
+                margin-left: 30px;
+                mat-icon {
+                    font-size: 27px;
+                    color: lightgray;
+                }
+            }
+            .notification mat-icon:hover {
+                color: #26b4ff;
+            }
+        }
+    }
+    .example-sidenav-container {
+        flex: 1;
+    }
+    .example-sidenav-content {
+        // display: flex;
+        height: 100%;
+        // align-items: center;
+        // justify-content: space-between;
+        background-color: #f4f9ff;
+        // height: 100%;
+        padding: 30px;
+        opacity: 0.9;
+        color: black !important;
+    }
+    .mat-list-item {
+        color: black;
+        opacity: 0.8;
+    }
+}
+
+.mat-toolbar {
+    opacity: 0.9;
+    // background: #e51282;
+    background-color: white;
+    color: rgb(5, 5, 5);
+}
+
+.example-toolbar {
+    z-index: 2;
+}
+::ng-deep .active{
+        color: blue !important;
+        span{
+            color: blue !important;
+        }
+        mat-icon{
+            color: blue !important;
+        }
+        mat-list-item{
+            color: blue !important;
+        }
+
+        // background-color: blue;
+
+    
+}
+.menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+    // margin-left: 70px;
+}
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
+.submenu {
+    // position: absolute;
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+}
+.submenu.expanded {
+    transform: scaleY(1);
+}
+span {
+    font-size: 20px;
+}
+.list_icon {
+    display: flex;
+    justify-content: space-between;
+}
+::ng-deep {
+    .mat-expansion-panel {
+        box-shadow: none !important;
+    }
+    .mat-list-item span {
+        font-size: 15px;
+        // color: #2c2c2c;
+    }
+    .mat-list-base .mat-list-item .mat-list-icon,
+    .mat-list-base .mat-list-option .mat-list-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        box-sizing: content-box;
+        border-radius: 50%;
+        padding: 4px;
+    }
+}
+.new-menu {
+    margin-left: 5px;
+    color: red;
+    animation: rotation 4s infinite cubic-bezier(0.89, -0.4, 0.02, 1.3) !important;
+}

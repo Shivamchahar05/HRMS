@@ -1,0 +1,160 @@
+.main {
+    .header {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 20px;
+        row-gap: 20px;
+        .leave {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            border-radius: 5px;
+
+            mat-icon {
+                margin-top: 1px;
+                font-size: 40px;
+                color: lightgreen;
+            }
+            .show_leave {
+                margin-left: 30px;
+
+                p {
+                    font-size: 15px;
+                    margin-bottom: 0px;
+                    color: #a3a4a6;
+                }
+            }
+        }
+    }
+    .second_card {
+        background-color: white;
+        .addleave {
+           
+            padding: 10px 10px 0px 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-bottom: 1px solid rgb(231, 229, 229);
+            h2 {
+                margin-top: 10px;
+                color: blue;
+            }
+            .add {
+                margin-top: 10px;
+                background: transparent;
+                -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
+                box-shadow: 0 0 0 1px #26b4ff inset;
+                color: #26b4ff;
+                border: none;
+                height: 25px;
+            }
+        }
+        .input_leaves{
+            padding: 20px;
+            .input_editor{
+                display: grid;
+                grid-template-columns: 45% 53%;
+                column-gap: 30px;
+                .leave_type{
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 300px;
+                        }
+                        
+                    }
+                }
+                .date{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .dob {
+                        position: relative;
+                        .picker {
+                            position: absolute;
+                            right: 9px;
+                            bottom: 8px;
+                        }
+                        ::ng-deep {
+                            .mat-form-field {
+                                width: 300px;
+                            }
+                            
+                        }
+                    }
+                }
+                .half{
+                    margin-left: 20px;
+                    mat-radio-button{
+                        margin-left: 100px;
+                    }
+                }
+                .remaks{
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 670px;
+                        }
+                        
+                    }
+                }
+                .upload_file{
+                    border-radius: 4px;
+                    padding: 15px;
+                    border: 1px solid rgb(231, 231, 231);
+                    margin-bottom: 50px;
+                }
+            }
+            .btn22{
+                button:first-child{
+                    border: none;
+                    background-color: green;
+                    color: white;
+                    padding: 10px;
+                    width: 100px;
+                    border-radius: 4px;
+
+                }
+                button{
+                    border: none;
+                    width: 100px;
+                    background-color: red;
+                    color: white;
+                    padding: 10px;
+                    margin-left: 20px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    .footer{
+        margin-top: 30px;
+        background-color: white;
+        width: 100%;
+        h2 {
+            padding: 20px;
+            color: blue;
+            font-weight: 500;
+            border-bottom: 1px solid rgb(235, 234, 234);
+        }
+        .search{
+            margin: 20px;
+            
+            span{
+                margin-left: 5px;
+            }
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 600px) {
+                display: block;
+               
+              }
+        }
+        .table{
+           padding-bottom: 20px;
+            margin-right: 40px;
+            @media screen and (max-width: 600px) {
+                width: 50%;
+               
+              }
+        }
+    }
+}

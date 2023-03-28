@@ -1,0 +1,85 @@
+<div class="main">
+    <form [formGroup]="my_details">
+        <div class="header">
+            <h1>Add Pitch</h1>
+            <div>
+                <button class="cancel">Cancel</button>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+        <div class="center">
+            <div>
+
+                <div class="heading">
+                    <h1>My Details</h1>
+                </div>
+                <div class="name">
+                    <label>Name</label><br>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput type="text" formControlName="Name">
+                    </mat-form-field>
+                </div>
+                <div class="EI_dob">
+                    <div>
+                        <label>Employee Id</label><br>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <input matInput type="text" formControlName="Employee_Id">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Date of birth</label><br>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <input matInput formControlName="DOB">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div class="heading">
+                    <h1>Pitch Details</h1>
+                </div>
+                <div class="pitch_detail">
+                    <label>Pitch Title</label><br>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput placeholder="Title" formControlName="title">
+                    </mat-form-field><br>
+                    <label>Industry</label><br>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-select formControlName="Industry">
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field><br>
+                    <label>Type</label><br>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-select formControlName="Type">
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Idea - (Share your idea in brief)</label><br>
+                    <!-- <ckeditor  [config]="config" debounce="500"></ckeditor> -->
+                    <editor [init]="{
+                            height: 200,
+                            menubar: false,
+                             toolbar:
+                              '  bold italic underline alignleft aligncenter alignright alignjustify '}"></editor>
+                </div>
+                <div class="presentation">
+                    <label>Presentation - (Share your detailed presentation on the idea) (ppt,pdf)</label><br>
+                    <div class="choose_file">
+                        <input type="file" formControlName="presentation">
+                        <!-- <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput type="file" >
+                </mat-form-field> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

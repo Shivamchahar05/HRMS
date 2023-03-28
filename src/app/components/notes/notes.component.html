@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="heading">
+        <h1>Project Note</h1>
+        <mat-icon>add_circle</mat-icon>
+    </div>
+    <div class="notes" *ngFor="let note of  project_notes">
+        <div>
+            <h3>{{note.notes}}</h3>
+            <span class="download">Download :</span>
+            <span><mat-icon>{{note.tag}}</mat-icon></span>
+        </div>
+        <div>
+            <span>Time:</span>
+            <span class="time">{{note.time}}</span>
+        </div>
+    </div>
+</div>

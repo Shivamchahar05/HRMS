@@ -1,0 +1,104 @@
+<div class="right-center" *ngIf="show" [@slideInOut]>
+    <h2>Basic Information</h2>
+    <form [formGroup]="basic_inform_form"> 
+        <div class="Input-fields">
+            <div class="first-grid">
+                <div>
+                    <label>First Name</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="First Name" required value="Shivam" formControlName="first_name">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Last Name</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Last Name" required value="chahar" formControlName="last_name">
+                    </mat-form-field>
+                </div>
+                <div class="dob">
+                    <label>Date of Birth</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput [matDatepicker]="dp5" formControlName="dp5">
+                        <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp5" ></mat-datepicker-toggle>
+                        <mat-datepicker #dp5 disabled="false"></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="second-grid">
+                <div>
+                    <label>Gender</label><br>
+                    <mat-form-field appearance="outline">
+                        <mat-select formControlName="gender">
+                            <input name="search" [(ngModel)]="searchText" autocomplete="off">
+                            <mat-option *ngFor="let gender of genders | searchFilter: searchText"
+                                [value]="gender.value">
+                                {{gender.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Marital Status</label><br>
+                    <mat-form-field appearance="outline">
+                        <mat-select formControlName="marital_status">
+                            <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                            <mat-option *ngFor="let Marital of Marital_Status | searchFilter: searchText"
+                                [value]="Marital.value">
+                                {{Marital.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <label>Contact Number</label><br>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Contact Number" required value="8755623618" formControlName="contact_number">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="third_grid">
+                <div class="years">
+                    <label>Total Working Experience</label><br>
+                    <div>
+                        <label>Years</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="number" required formControlName="working_experience_year">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Months</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="number" required formControlName="working_experience_month">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="years">
+                    <label>Relevant Experience</label><br>
+                    <div>
+                        <label>Years</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="number" required formControlName="relevant_experience_year">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Months</label><br>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="number" required formControlName="relevant_experience_month">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="address">
+                <label>Address</label><br>
+                <mat-form-field class="example-full-width" appearance="outline" >
+                    <textarea matInput formControlName="address"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="btn">
+                <button (click)="save()">
+                    Save
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

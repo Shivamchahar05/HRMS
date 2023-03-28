@@ -1,0 +1,11 @@
+<div class="appinventiv_gallery_img">
+    <div>
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let img of selectedGallery.gallery_images">
+            <div class="item">
+                <img style="height: 260px;width:90%" src={{img}} />
+            </div>
+        </ng-template>
+    </ngb-carousel>
+    </div>
+</div>

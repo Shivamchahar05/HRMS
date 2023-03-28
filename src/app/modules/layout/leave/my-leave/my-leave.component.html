@@ -1,0 +1,115 @@
+<div class="main">
+    <div class="header">
+        <div *ngFor="let Leaves of employeeLeaves" class="leave">
+            <div>
+                <mat-icon>event</mat-icon>
+            </div>
+            <div class="show_leave">
+                <p>{{Leaves.type}}<span>({{Leaves.total}})</span></p>
+                <p>{{Leaves.type}}Balance()</p>
+            </div>
+        </div>
+    </div>
+    <div class="second_card">
+        <div class="addleave">
+            <h2>Add Leave</h2>
+            <button class="add" (click)="add_leave()">+Add New</button>
+        </div>
+        <div *ngIf="addleave" class="input_leaves">
+            <div class="input_editor">
+                <div>
+                    <div class="leave_type">
+                        <label>Leave Type</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select>
+                                <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off">
+                                <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type">
+                                    {{allocation_type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-checkbox class="example-margin" (click)="halfday()">Half Day?</mat-checkbox>
+                        <mat-radio-group aria-label="Select an option" *ngIf="halfdays" class="half">
+                            <mat-radio-button value="1">1 half</mat-radio-button>
+                            <mat-radio-button value="2">2 half</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="date">
+                        <div class="dob">
+                            <label>Start Date</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="dp5">
+                                <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp5"></mat-datepicker-toggle>
+                                <mat-datepicker #dp5 disabled="false"></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="dob">
+                            <label>End Date</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="dp6">
+                                <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp6"></mat-datepicker-toggle>
+                                <mat-datepicker #dp6 disabled="false"></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="remaks">
+                        <label>Remarks</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Remarks</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <label>Upload Document</label>
+                        <div class="upload_file">
+                            <input type="file">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Leave Reason</label>
+                    <div>
+                        <editor [init]="{
+                        height: 400,
+                        menubar: false,
+                         toolbar:
+                          '  bold italic underline alignleft aligncenter alignright alignjustify '}"></editor>
+                    </div>
+                </div>
+            </div>
+            <div class="btn22">
+                <button>Save</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>List All Leave</h2>
+        <div class="search">
+            <div>
+                <span>Show</span>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <mat-option value="10">10</mat-option>
+                        <mat-option value="25">25</mat-option>
+                        <mat-option value="50">50</mat-option>
+                        <mat-option value="100">100</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <span>entries</span>
+            </div>
+            <div>
+                <span>Search:</span>
+                <mat-form-field appearance="outline">
+                    <input matInput required value="">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <section class="table">
+            <app-table [columns]="headings" [dataSource]="datasource">hiiiii</app-table>
+        </section>
+    </div>
+</div>

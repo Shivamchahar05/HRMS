@@ -1,0 +1,33 @@
+.right_center{
+    background-color: white;
+    // padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 50px;
+    h2{
+        color: blue;
+        padding: 20px;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(235, 234, 234);
+    }
+    
+    table{
+        width: 96%;
+        margin: 20px;
+        border-collapse: collapse;
+        tr:last-child{
+              background-color: #f1f1f2;;
+        }
+        td:first-child{
+            border-right: 1px solid rgb(235, 234, 234);
+            // border-collapse: collapse;
+        }
+        td{
+            border-top: 1px solid rgb(235, 234, 234);
+            padding: 10px;
+        }
+        
+        
+
+    }
+}

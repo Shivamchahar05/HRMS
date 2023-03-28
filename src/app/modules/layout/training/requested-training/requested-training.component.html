@@ -1,0 +1,18 @@
+<div class="header">
+    <h1>Requested Trainings</h1>
+</div>
+<div class="main">
+    <div class="option">
+        <span>Show</span>
+        <mat-form-field appearance="outline">
+            <mat-select>
+                <mat-option value="10">10</mat-option>
+                <mat-option value="25">25</mat-option>
+                <mat-option value="50">50</mat-option>
+                <mat-option value="100">100</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <span>entries</span>
+    </div>
+    <app-table [columns]="headings" [dataSource]="datasource" [TableClass]="'request'">hiiiii</app-table>
+</div>

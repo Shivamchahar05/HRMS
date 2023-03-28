@@ -1,0 +1,147 @@
+.second_card {
+    background-color: white;
+    .addleave {
+        padding: 10px 10px 0px 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-bottom: 1px solid rgb(231, 229, 229);
+        h2 {
+            margin-top: 10px;
+            color: blue;
+        }
+        .add {
+            margin-top: 10px;
+            background: transparent;
+            -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
+            box-shadow: 0 0 0 1px #26b4ff inset;
+            color: #26b4ff;
+            border: none;
+            height: 25px;
+        }
+    }
+    .input_leaves {
+        padding: 20px;
+        .input_editor {
+            display: grid;
+            grid-template-columns: 45% 53%;
+            column-gap: 30px;
+            .leave_type {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 100%;
+                    }
+                }
+            }
+            .remaks {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 100%;
+                    }
+                }
+            }
+            .date {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                .dob {
+                    position: relative;
+                    .picker {
+                        position: absolute;
+                        right: 9px;
+                        bottom: 8px;
+                    }
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 200px;
+                        }
+                    }
+                }
+                .check {
+                    margin-top: 40px;
+                    .no_work {
+                        margin-left: 100px;
+                    }
+                }
+            }
+        }
+        .btn22 {
+            button {
+                border: none;
+                background-color: green;
+                color: white;
+                padding: 10px;
+                width: 100px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+.submission {
+    background-color: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 5px;
+    .check_submission {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+
+        .dob {
+            position: relative;
+            .picker {
+                position: absolute;
+                right: 9px;
+                bottom: 8px;
+            }
+        }
+        .btn22 {
+            margin-top: 25px;
+            button {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199cff;
+                background-blend-mode: soft-light, normal;
+                border: 1px solid rgba(150, 165, 184, 0.2);
+                box-sizing: border-box;
+                box-shadow: 0px 1px 4px rgb(0 0 0 / 12%), inset 0px 2px 0px rgb(255 255 255 / 24%);
+                border-radius: 4px;
+                color: #ffffff;
+                height: 40px;
+                width: 70px;
+            }
+        }
+        ::ng-deep {
+            .mat-form-field {
+                width: 347px;
+            }
+        }
+    }
+}
+.footer {
+    margin-top: 30px;
+    background-color: white;
+    width: 100%;
+    h2 {
+        padding: 20px;
+        color: blue;
+        font-weight: 500;
+        border-bottom: 1px solid rgb(235, 234, 234);
+    }
+    .search {
+        margin: 20px;
+
+        span {
+            margin-left: 5px;
+        }
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 600px) {
+            display: block;
+        }
+    }
+    .table {
+        padding-bottom: 20px;
+        margin-right: 40px;
+        @media screen and (max-width: 600px) {
+            width: 50%;
+        }
+    }
+}

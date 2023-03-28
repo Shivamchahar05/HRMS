@@ -1,0 +1,69 @@
+.main {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+            color: blue;
+            font-weight: 500;
+            font-size: 40px;
+        }
+        .tags {
+            
+            background-color: white;
+            padding: 10px;
+            width: 25%;
+            // min-width: 25%;
+            // max-width: 25%;
+            height: 200px;
+            border-radius: 5px;
+            .label {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgb(230, 230, 230);
+                .mat-icon {
+                    color: blue;
+                    font-size: 30px;
+                }
+            }
+            .tag {
+                // width: 100%;
+                display: flex;
+                margin-top: 10px;
+                h4 {
+                    border-radius: 5px;
+                    padding: 5px;
+                    margin-left: 10px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: "Segoe UI";
+                    margin-bottom: 10px;
+                    background: rgba(178, 54, 241, 0.2);
+                }
+            }
+            // .tag li{
+            //     display: flex;
+            //     margin-right: 5px;
+            //     font-size: 16px;
+            //     font-weight: 400;
+            //     font-family: 'Segoe UI';
+            //     margin-bottom: 10px;
+            // }
+        }
+    }
+}
+::ng-deep{
+    .mat-tab-label-container{
+        background-color: white;
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: 5px;
+        border-bottom: none;
+    }
+    .mat-tab-header{
+        border-bottom: none;
+    }
+    .mat-tab-label{
+        font-size: 20px;
+        color: black !important;
+    }
+}

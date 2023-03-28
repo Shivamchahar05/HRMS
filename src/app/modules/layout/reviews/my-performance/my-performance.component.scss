@@ -1,0 +1,185 @@
+.main{
+    margin: 20px;
+    h2{
+        color: blue;
+    }
+    .head{
+        margin-top: 20px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        padding-bottom: 80px;
+        .user{
+            display: flex;
+            img{
+                height: 80px;
+                border: 1px solid lightgrey;
+                margin-right: 20px;
+            }
+            h3{
+                font-size: 20px;
+                margin-bottom: 0px;
+                font-weight: 500;
+            }
+            button{
+                border: none;
+                padding: 5px;
+                // width: 60px;
+                background-color: #F7FFB3;
+                font-weight: 500;
+                
+            }
+        }
+        .award_horns{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .awards{
+                padding: 20px;
+                background-color: #FFF3CB;
+                border-radius: 5px;
+                width: 500px;
+                margin-right: 20px;
+                h4{
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+                h5{
+                    font-size: 17px;
+                }
+
+            }
+            .honour{
+                padding: 20px;
+                background-color: #CBE7FF;
+                border-radius: 5px;
+                h4{
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+                h5{
+                    font-size: 17px;
+                }
+            }
+
+        }
+        .rating{
+            background-color: #dfffb0;
+            padding: 20px;
+            border-radius: 10px;
+            .main_rating{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                .date{
+                    background-color:white ;
+                    width: 200px;
+                    height: 30px;
+                    padding-top: 5px;
+                    text-align: center;
+                    border-radius: 5px;
+                    font-weight: 600;
+                    border: 1px solid lightgray;
+                }
+                h1{
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+            }
+            .labal_skills{
+               display: grid;
+               grid-template-columns: auto auto auto auto;
+               column-gap: 20px;
+                .tech_skill{
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #edffd2;
+                    padding: 30px;
+                    border-radius: 5px;
+                    p{
+                        color: grey;
+                    }
+                    h4{
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                }
+                @media screen and (max-width: 750px) {
+                    
+                    display: grid;
+                    grid-template-columns: auto;
+                    // margin-left: 100px;
+                  }
+            }
+            @media screen and (max-width: 1200px) {
+               
+                margin-top: 20px;
+              }
+        }
+        @media screen and (max-width: 1200px) {
+           display: block;
+            // margin-left: 100px;
+          }
+    }
+    .footer{
+        margin-top: 30px;
+        border: 1px solid lightgrey;
+        background-color: white;
+        .btn22{
+            border-bottom: 1px solid rgb(245, 244, 244);
+           padding: 20px;
+           button{
+            background-color: #199CFF;
+            color: white;padding: 10px;
+            border: none;
+            border-radius: 5px;
+           }
+        }
+        .performance{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            h1{
+                font-weight: 600;
+                padding-top: 20px;
+            }
+            @media screen and (max-width: 600px) {
+               
+                display: block;
+              }
+        }
+       
+        .month{
+            padding: 0px 40px 40px 40px;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25% ;
+            column-gap: 20px;
+            row-gap: 20px;
+            h4{
+                font-weight: 500;
+            }
+            @media screen and (max-width: 600px) {
+               
+                display: grid;
+                grid-template-columns: auto ;
+              }
+    
+        
+        .month_under{
+            padding: 20px; border-radius: 10px;
+            border: 1px solid lightgray;
+            height: 130px;
+            width: 300px;
+            @media screen and (max-width: 600px) {
+               
+                height: 130px;
+                width: 200px;
+              }
+        }
+    }
+    }
+}

@@ -1,0 +1,154 @@
+.main {
+    padding: 20px;
+    h1 {
+        color: #199cff;
+        font-weight: 500;
+    }
+    .search_bar {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 240px;
+        ::ng-deep {
+            .mat-form-field {
+                width: 500px;
+            }
+        }
+        .btn {
+            margin-top: 20px;
+            border: none;
+            // display: flex;
+            button:first-child {
+                background-color: white;
+                border: 1px solid lightgray;
+                padding: 10px;
+                color: grey;
+                margin-right: 40px;
+                height: 40px;
+                width: 100px;
+                border-radius: 5px;
+            }
+            button {
+                border: none;
+                height: 40px;
+                border-radius: 5px;
+                background-color: #199cff;
+                color: white;
+                mat-icon {
+                    font-size: 17px;
+                    padding: 5px;
+                    color: white;
+                }
+            }
+        }
+    }
+    .directory {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 20px;
+        column-gap: 20px;
+        .directories {
+            width: 500px;
+            position: relative;
+            background-color: #f7f5ec;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            transition:2s;
+            .imges {
+                //    position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .setwidth {
+                    // width: 40%;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    .background_blue_img {
+                        transition: 2s;
+                        // margin-left: 50px;
+                        // display: flex;
+                        // justify-content: center;
+                        // align-items: center;e
+                        position: relative;
+                        // height: 300px;
+                        height: 140px;
+                        width: 140px;
+                        border-radius: 50%;
+                        .img_box {
+                            position: absolute;
+                            // display: flex;
+                            // justify-content: center;
+                            // align-items: center;
+                            top: 5px;
+                            left: 5px;
+                            img {
+                                transition: 2s;
+                                // height: 150px;
+                                // width: 150px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+
+                h2 {
+                    text-align: center;
+                }
+
+                // .user_blue_hover{
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 300px;
+                //     bottom: 50px;
+                //     right:20px;
+
+                // }
+            }
+            .details {
+                text-align: center;
+            }
+            .blue_hover {
+                position: absolute;
+                width: 100%;
+                height: 20px;
+                // bottom: 50px;
+                right: 0px;
+                transition: 2s;
+            }
+        }
+        .directories:hover {
+                // height: 30px;
+                // width: 30px;
+            .background_blue_img {
+                background-color: blue;
+            }
+            .blue_hover {
+                background-color: blue;
+            }
+            .upper_background {
+                background-color: blue;
+            }
+            .img{
+                transform: scale(0.7) !important;
+                // border-radius: 50%;
+            }
+        }
+        .upper_background {
+            position: absolute;
+            transition: 2s;
+            bottom: 70%;
+            right: 14%;
+            // transform: scale(3);
+            transform: translateY(-50%, -50%);
+            height: 90px;
+            width: 350px;
+            border-radius: 0 0 50% 50%/0 0 100% 100%;
+        }
+    }
+}
+// .imges:hover{
+//     .user_blue_hover{
+//         background-color: blue;
+//     }
+// }

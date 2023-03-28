@@ -1,0 +1,61 @@
+.input_filters {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    h1 {
+        padding: 10px;
+        color: blue;
+        font-weight: 500;
+        border-bottom: 1px solid rgb(231, 229, 229);
+    }
+    .filters {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        ::ng-deep {
+            .mat-form-field {
+                width: 350px;
+            }
+        }
+        .dob {
+            position: relative;
+            .picker {
+                position: absolute;
+                right: 9px;
+                bottom: 8px;
+            }
+            ::ng-deep {
+                .mat-form-field {
+                    width: 350px;
+                }
+            }
+        }
+        .btn22 {
+            button {
+                background: #3246d3;
+                color: #fff;
+                font-family: "Segoe UI";
+                border-radius: 4px;
+                padding: 11px 15px 11px 15px;
+                cursor: pointer;
+                outline: none;
+                box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+                font-size: 18px;
+                font-weight: 600;
+                margin: 27px 10px 0 0;
+                text-transform: capitalize;
+                border: none;
+            }
+        }
+    }
+}
+.dsr_list{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    h2{
+        color: blue;
+        padding: 10px;
+        border-bottom: 1px solid rgb(234, 233, 233);
+    }
+}

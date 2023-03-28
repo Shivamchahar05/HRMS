@@ -1,0 +1,19 @@
+<div class="main"*ngIf="show" [@slideInOut]>
+    <div class="center">
+        <div class="head">
+            <img class="appinventiv" src="/assets/applogo.png">
+            <app-google *ngIf="googl"></app-google>
+            <app-credentials *ngIf="crediential"></app-credentials>
+        </div>
+        <div class="btn2" *ngIf="googl" (click)="credentials()">
+            <button>LOGIN WITH CREDENTIALS</button>
+        </div>
+        <div class="btn2" *ngIf="crediential" (click)="google()">
+            <button>LOGIN WITH GOOGLE</button>
+        </div>
+        <div class="line"></div>
+        <footer>
+            <p>2023 © Appinventiv HR System</p>
+        </footer>
+    </div>
+</div>

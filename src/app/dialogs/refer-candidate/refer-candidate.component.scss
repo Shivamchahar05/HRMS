@@ -1,0 +1,123 @@
+@mixin primary-button($color:null,$bg_color:null,$f_size:null,$height:null,$width:null){
+    height:$height;
+    width:$width;
+    font-size:$f_size;
+    color: $color;
+    background: $bg_color;
+    border: none;
+    cursor: pointer;
+  }
+  @mixin flex($a-item, $j-cont) {
+    display: flex;
+    align-items: $a-item;
+    justify-content: $j-cont;
+  }
+  $primary:#008aff;
+$warning:rgb(248, 15, 15);
+$primary_light:#00abff;
+$dashboard_bg:#f3f7fc;
+$dialog_grey:#f3f3f3;
+$dashboard_yellow:#f7f6ec;
+// @import "../../../../../../scss/common";
+header{
+    background-color: $dialog_grey;
+    padding: 12px 20px 4px 20px;
+    @include flex(center,space-between);
+    h1{
+        color:$primary;
+        font-weight: 580;
+        margin-bottom: 5px !important;
+    }
+    .close-icon{
+        // border:1.5px solid black;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        padding: 2px;
+        color: grey;
+        // position: relative;
+       
+    }
+}
+.main{
+    padding: 20px;
+    @include flex(stretch,center);
+    flex-direction: column;
+    
+    .job-details{
+        mat-label{
+            color:gray;
+        }
+        h2{
+            margin-top: 0.5rem;
+            color:darkgray;
+            font-weight: 450;
+        }
+        .job-details-inputs{
+            display: grid;
+            grid-template-columns: 48% 48%;
+            padding: 1rem;
+            column-gap: 17px;
+            .input-field{
+                @include flex(stretch,center);
+                flex-direction: column;
+            }
+            @media(max-width: 900px){
+                grid-template-columns: 95%;
+            }
+        }
+    }
+
+    .candidate-details{
+        mat-label{
+            color:gray;
+        }
+        h2{
+            margin-top: 0.5rem;
+            color:darkgray;
+            font-weight: 450;
+        }
+        .candidate-details-inputs{
+            display: grid;
+            grid-template-columns: 48% 48%;
+            padding: 1rem;
+            column-gap: 17px;
+            .input-field{
+                @include flex(stretch,center);
+                flex-direction: column;
+            }
+            @media(max-width: 900px){
+                grid-template-columns: 95%;
+            }
+        }
+    }
+    .submit{
+        @include flex(center,flex-end);
+        margin:0 10px 10px 0;
+        button{
+            @include primary-button($color: white, $bg_color: $primary_light, $height: 45px, $width: 15%);
+            border-radius: 2px;
+        }
+    }
+
+
+}
+::ng-deep{
+    .mat-dialog-container {
+        padding: 0px
+    }
+}
+.close-icon {
+    transition: 1s ease-in-out;
+  }
+  
+  .close-icon:hover {
+    transform: rotate(180deg);
+  }
+  
+  ::ng-deep .icon-outside .close-button{
+    float: right;
+    top:-52px;
+    right:-52px;
+  }

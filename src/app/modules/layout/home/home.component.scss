@@ -1,0 +1,225 @@
+.main {
+    padding: 20px;
+    .head {
+        display: flex;
+        img {
+            height: 100px;
+            border: 1px solid lightgrey;
+        }
+        .text {
+            margin-left: 20px;
+            margin-top: 20px;
+            p {
+                font-size: 25px;
+                color: gray;
+            }
+            h1 {
+                font-weight: 600;
+            }
+        }
+    }
+    .job_opening {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        .left_head {
+            display: flex;
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            // padding: 20px;
+            .first_child_border {
+                max-width: 550px;
+                // max-height: 600px;
+                padding: 20px;
+                border-right: 1px dashed lightgrey;
+                .ljo_head {
+                    display: flex;
+                    justify-content: space-between;
+                    .btn2 {
+                        margin-top: 7px;
+                        button {
+                            padding: 5px;
+                            border: none;
+                            background-color: #199cff;
+                            color: white;
+                            border-radius: 5px;
+                            box-shadow: 2px 1px 1px 2px #199cff;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1200px) {
+                    max-width: 420px;
+                }
+                @media screen and (max-width: 700px) {
+                    max-width: 7000px;
+                }
+                @media screen and (max-width: 500px) {
+                    max-width: 4000px;
+                }
+            }
+            @media screen and (max-width: 700px) {
+                display: block;
+            }
+            @media screen and (max-width: 500px) {
+                max-width: 400px;
+            }
+        }
+        .second_child {
+            padding: 20px;
+            // width: 500px;
+            h3 {
+                color: #199cff;
+            }
+            .referral {
+                display: grid;
+                grid-template-columns: auto auto;
+                row-gap: 10px;
+                column-gap: 20px;
+                // width: 50%;
+                .bonus {
+                    background-color: #f3f7fc;
+                    padding: 20px;
+                    h1 {
+                        text-align: center;
+                        font-size: 50px;
+                        color: #199cff;
+                        font-weight: 600;
+                        margin-top: 30px;
+                    }
+                    p:nth-of-type(1) {
+                        font-weight: 600;
+                        // font-size: 20px;
+                    }
+                    p {
+                        text-align: center;
+                        // font-size: 20px;
+                    }
+                }
+                @media screen and (max-width: 600px) {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    row-gap: 10px;
+                }
+                @media screen and (max-width: 500px) {
+                    display: grid;
+                    grid-template-columns: auto ;
+                    row-gap: 10px;
+                }
+            }
+            
+        }
+        @media screen and (max-width: 1200px) {
+            display: block !important;
+
+            .right_carosal {
+                width: 90%;
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+        }
+        // 
+    }
+
+    .right_carosal {
+        margin-left: 40px;
+        margin-right: 20px;
+        border: 1px solid lightgrey;
+        padding: 20px;
+        width: 30%;
+        color: black;
+        // .carousal {
+        //     .carousel-arrows {
+        //         .carousel-arrow .carousel-arrow-prev {
+        //             display: none;
+        //             top: -8% !important;
+        //             margin-left: 120px;
+        //         }
+        //     }
+        // }
+        @media screen and (max-width: 1200px) {
+            .member {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .latest_at_appinventiv {
+        margin-top: 20px;
+        background-color: white;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        // width: 500px !important;
+        // padding: 20px;
+        h1 {
+            padding: 10px;
+        }
+        .line {
+            border-bottom: 1px solid lightgrey;
+        }
+    }
+    .appinventiv_gallery {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        background-color: white;
+        border: 1px solid lightgrey;
+        .appinventiv_gallery_img {
+            // position: relative;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-bottom: 20px;
+            .item {
+                position: relative;
+                img {
+                    height: 260px;
+                    width: 90%;
+                }
+                .gallery-name {
+                    width: 100%;
+                    position: absolute;
+                    top: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    // margin-right: 70px;
+                    p{
+                        margin-left: 20px;
+                        color: white;
+                        margin-top: 10px;
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                    .btn22 {
+                        margin-right: 60px;
+                        button {
+                            padding: 10px;
+                            color: white;
+                            border-radius: 20px;
+                            background-color: rgba(0, 0, 0, 0.5);;
+                            
+                            border: 1px solid white;
+                            width: 100px;
+                        
+                        }
+                    }
+                }
+            }
+        }
+        .line {
+            height: 5px;
+            border-bottom: 1px solid lightgray;
+        }
+        h1 {
+            font-weight: 500;
+            margin: 20px;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main {
+        .job_opening {
+            display: grid;
+            grid-template-columns: auto auto;
+            row-gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div>
+    <div mat-dialog-content class="main">
+        <h1>Add Tags</h1>
+    </div>
+    <div class="input_field">
+        <mat-form-field appearance="outline">
+            <input matInput [(ngModel)]="add_tag" placeholder="Add Tags">
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="btn22">
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button (click)="new_add_tag()" cdkFocusInitial class="add">Add</button>
+    </div>
+</div>
