@@ -39,4 +39,7 @@ export class TableComponent implements OnInit {
   dsr_updated(){
     this.route.navigate(['/layout/edit-dsr'])
   }
+  leave_details(){
+    this.route.navigate(['/layout/leave-details'])
+  }
 }

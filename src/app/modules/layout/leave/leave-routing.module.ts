@@ -18,6 +18,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./floating-leave/floating-leave.module').then((m) => m.FloatingLeaveModule),
       },
+      {
+        path: "leave-details",
+        loadChildren: () =>
+          import('./leave-details/leave-details.module').then((m) => m.LeaveDetailsModule),
+      },
     ]}
 ];
 
