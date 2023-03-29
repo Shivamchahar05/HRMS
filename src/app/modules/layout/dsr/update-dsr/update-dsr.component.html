@@ -1,53 +1,54 @@
 <div class="main">
-    <div class="input_leaves">
-        <div class="input_editor">
-            <div>
-                <div class="leave_type">
-                    <label>Project</label><br>
-                    <mat-form-field appearance="outline">
-                        <mat-select >
-                            <input type="text" name="search" autocomplete="off">
-                            <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type"
-                                aria-placeholder="Department">
-                                {{allocation_type}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div class="date">
-                    <div class="dob">
-                        <label>Date</label><br>
-                        <mat-form-field appearance="outline">
-                            <input matInput [matDatepicker]="dp5" >
-                            <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp5">
-                            </mat-datepicker-toggle>
-                            <mat-datepicker #dp5 disabled="false"></mat-datepicker>
-                        </mat-form-field>
-                    </div>
-                    <div class="dob">
-                        <label>Estimated Hour</label><br>
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <input matTimepicker format="HH:mm" >
-                        </mat-form-field>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <label>Description</label>
+    <form [formGroup]="dsrform_updated">
+        <div class="input_leaves">
+            <div class="input_editor">
                 <div>
-                    <editor [init]="{
+                    <div class="leave_type">
+                        <label>Project</label><br>
+                        <mat-form-field appearance="outline">
+                            <mat-select formControlName="Project">
+                                <input type="text" name="search" autocomplete="off">
+                                <mat-option *ngFor="let allocation_type of Leave_type" [value]="allocation_type"
+                                    aria-placeholder="Department">
+                                    {{allocation_type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="date">
+                        <div class="dob">
+                            <label>Date</label><br>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="dp5" formControlName="dp5">
+                                <mat-datepicker-toggle class="picker" matIconSuffix [for]="dp5">
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #dp5 disabled="false"></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="dob">
+                            <label>Estimated Hour</label><br>
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <input matTimepicker format="HH:mm" formControlName="Hour">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <div>
+                        <editor [init]="{
                 height: 400,
                 menubar: true,
                 selector: 'textarea',
                 bold: { inline: 'span', classes: 'bold' },
                  toolbar:
-                  '  bold italic underline alignleft aligncenter alignright alignjustify '}"
-                        ></editor>
+                  '  bold italic underline alignleft aligncenter alignright alignjustify '}" formControlName="Description"></editor>
+                    </div>
                 </div>
             </div>
+            <div class="btn22">
+                <button (click)="updated_dsr()">updated</button>
+            </div>
         </div>
-        <div class="btn22">
-            <button >updated</button>
-        </div>
-    </div>
+    </form>
 </div>

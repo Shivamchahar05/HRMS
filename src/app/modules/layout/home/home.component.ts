@@ -13,7 +13,7 @@ import { GalaryDialogComponent } from 'src/app/dialogs/galary-dialog/galary-dial
   animations: loginFlipAnimation.animations
 })
 export class HomeComponent implements OnInit {
-   
+  count_image:any
   Images:any=[];
  
   constructor(private rendre:Renderer2, private ref:ElementRef, private route:Router,private _dialog:MatDialog ) { }
@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.Images=GALLERY_DATA
+    this.count_image=this.Images.length
     console.log(this.Images,'images');
     
 
@@ -117,7 +118,7 @@ export class HomeComponent implements OnInit {
   openGallery(id:number){
     let dialogConfig:MatDialogConfig = {
       // maxHeight:"36rem",
-      maxWidth:"40rem",
+      maxWidth:"80rem",
       data:id
     }
 

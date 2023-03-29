@@ -8,4 +8,5 @@ export class JobDetailsService {
   constructor() { }
   job_detals:any
   dsr_details:any
+  count_images:any
 }

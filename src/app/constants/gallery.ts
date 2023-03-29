@@ -58,7 +58,7 @@ export const GALLERY_IMAGES = [
       'https://dashboard.appinventiv.com/uploads/gallery/award_167229202066.jpg',
       'https://dashboard.appinventiv.com/uploads/gallery/award_1672292037448.jpg',
       'https://dashboard.appinventiv.com/uploads/gallery/award_1672292047600.jpg'
-    ]
+    ],
   },
   {
     gallery_code: 102,
