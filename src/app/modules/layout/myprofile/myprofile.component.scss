@@ -7,6 +7,11 @@
         .user-image {
             height: 40%;
             border: 1px solid rgb(100, 99, 99);
+            @media screen and (max-width: 1200px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
         .user-information {
             margin-left: 20px;
@@ -14,6 +19,9 @@
             h1 {
                 margin-bottom: 0px;
             }
+        }
+        @media screen and (max-width: 1200px) {
+            display: block;
         }
     }
     .center {
@@ -30,144 +38,133 @@
                 // border: 1px solid lightgray;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
-                // .header {
-                //     padding: 20px;
-                //     // background-color: #26b4ff;
-                //     display: flex;
-                //     padding-bottom: 0px;
-                //     border-top-left-radius: 10px;
-                //     border-top-right-radius: 10px;
-                //     mat-icon {
-                //         font-size: 30px;
-                //         // color: white;
-                //     }
-                //     h3 {
-                //         margin-left: 15px;
-                //         // color: white;
-                //     }
-                //     // span{
-                //     //     margin-left: 10px;
-                //     //     padding-bottom: 20px;
-                //     // }
-                // }
+
                 a {
-                    // width: 35%;
                     display: flex;
-                    padding-top: 20px;
+                    padding-top: 10px;
                     padding-bottom: 10px;
                     padding-left: 20px;
-                    border-bottom:1px solid lightgray ;
-                    // padding-right: 200px;
-                    // border:1px solid lightgray ;
-                    // border-bottom: 1px solid lightgray;
-                    // border-left: 1px solid lightgray;
-                    // border-right: 1px solid lightgray;
+                    border-bottom: 1px solid lightgray;
                     text-decoration: none;
                     mat-icon {
                         color: rgb(153, 151, 151);
                         font-size: 20px;
                     }
                     p {
+                        font-family: "Segoe UI";
+                        font-size: 15px;
                         margin-left: 10px;
-                        // margin-left: 20px;
+                        margin-bottom: 0px;
                         color: rgb(153, 151, 151);
-                        // text-align: center;
-                        // padding-bottom: 10px;
                     }
+                }
+                @media screen and (max-width: 1200px) {
+                    // width: 100%;
                 }
             }
-        }
-        .router{
-            margin-left: 40px;
-            width: 100%;
-        }
-        .right-center {
-            background-color: white;
-            width: 100%;
-            h2 {
-                padding: 20px;
-                color: blue;
-                font-weight: 600;
-                border-bottom: 1px solid rgb(235, 234, 234);
+            @media screen and (max-width: 1200px) {
+                width: 100%;
             }
-            .Input-fields {
-                padding: 25px;
-                .first-grid {
-                    display: grid;
-                    grid-template-columns: auto auto auto;
-                    column-gap: 10px;
-                    ::ng-deep {
-                        .mat-form-field {
-                            width: 366px;
-                        }
-                    }
-                }
-                .dob {
-                    position: relative;
-                    .picker {
-                        position: absolute;
-                        right: 9px;
-                        bottom: 8px;
-                    }
-                }
-                .second-grid {
-                    display: grid;
-                    grid-template-columns: auto auto auto;
-                    column-gap: 10px;
+        }
+        .router {
+            margin-left: 10px;
+            width: 100%;
+            @media screen and (max-width: 1200px) {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+        // .right-center {
+        //     background-color: white;
+        //     width: 100%;
+        //     h2 {
+        //         padding: 20px;
+        //         color: blue;
+        //         font-weight: 600;
+        //         border-bottom: 1px solid rgb(235, 234, 234);
+        //     }
+        //     .Input-fields {
+        //         padding: 25px;
+        //         .first-grid {
+        //             display: grid;
+        //             grid-template-columns: auto auto auto;
+        //             column-gap: 10px;
+        //             ::ng-deep {
+        //                 .mat-form-field {
+        //                     width: 366px;
+        //                 }
+        //             }
+        //         }
+        //         .dob {
+        //             position: relative;
+        //             .picker {
+        //                 position: absolute;
+        //                 right: 9px;
+        //                 bottom: 8px;
+        //             }
+        //         }
+        //         .second-grid {
+        //             display: grid;
+        //             grid-template-columns: auto auto auto;
+        //             column-gap: 10px;
 
-                    ::ng-deep {
-                        .mat-form-field {
-                            width: 366px;
-                            .mat-select {
-                                .mat-input{
-                                border: 1px solid;
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-                .third_grid{
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    column-gap: 10px;
-                    ::ng-deep {
-                        .mat-form-field {
-                            width: 265px;
-                        }
-                    }
-                    .years{
-                        display: grid;
-                        grid-template-columns: auto auto;
-                        column-gap: 10px;
-                    }
-                }
-                .btn{
-                    margin-top: 30px;
-                    button{
-                        background-color: #199CFF;
-                        color: white;padding: 10px;
-                        border: none;
-                        border-radius: 5px;
-                        // box-shadow: 1px 0px 0px 1px rgb(195, 193, 193);
-                    }
-                }
-            }
-        }
-        .example-full-width{
-            width: 99%;
+        //             ::ng-deep {
+        //                 .mat-form-field {
+        //                     width: 366px;
+        //                     .mat-select {
+        //                         .mat-input{
+        //                         border: 1px solid;
+        //                         }
+        //                     }
+        //                 }
+
+        //             }
+        //         }
+        //         .third_grid{
+        //             display: grid;
+        //             grid-template-columns: auto auto;
+        //             column-gap: 10px;
+        //             ::ng-deep {
+        //                 .mat-form-field {
+        //                     width: 265px;
+        //                 }
+        //             }
+        //             .years{
+        //                 display: grid;
+        //                 grid-template-columns: auto auto;
+        //                 column-gap: 10px;
+        //             }
+        //         }
+        //         .btn{
+        //             margin-top: 30px;
+        //             button{
+        //                 background-color: #199CFF;
+        //                 color: white;padding: 10px;
+        //                 border: none;
+        //                 border-radius: 5px;
+        //                 // box-shadow: 1px 0px 0px 1px rgb(195, 193, 193);
+        //             }
+        //         }
+        //     }
+        // }
+        // .example-full-width{
+        //     width: 99%;
+        // }
+        @media screen and (max-width: 1200px) {
+            display: grid;
+            grid-template-columns: auto;
         }
     }
 }
-.router-link-active{
-    background-color: #199CFF;;
+.router-link-active {
+    background-color: #199cff;
     border-radius: 2px;
-    p{
-        color: white !important; 
+    p {
+        color: white !important;
         font-size: 20px;
     }
-    mat-icon{
-        color:white !important;
+    mat-icon {
+        color: white !important;
         font-size: 20px;
     }
 }

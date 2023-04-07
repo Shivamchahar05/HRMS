@@ -1,6 +1,6 @@
-.right_center{
+.right_center {
     background-color: white;
-    width: 100%;
+    // width: 100%;
     h2 {
         padding: 20px;
         color: blue;
@@ -9,9 +9,16 @@
     }
     .Input-fields {
         padding: 25px;
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Segoe UI";
+            color: #2f3031;
+            margin-bottom: 5px;
+        }
         .first-grid {
             display: grid;
-            grid-template-columns: auto auto ;
+            grid-template-columns: 50% 50%;
             column-gap: 10px;
             ::ng-deep {
                 .mat-form-field {
@@ -20,33 +27,24 @@
             }
             @media screen and (max-width: 1200px) {
                 display: grid;
-                grid-template-columns: auto  ;
-              }
-              @media screen and (max-width: 700px) {
+                grid-template-columns: auto;
+            }
+            @media screen and (max-width: 700px) {
                 ::ng-deep {
                     .mat-form-field {
                         width: 350px;
                     }
                 }
-              }
-              @media screen and (max-width: 500px) {
+            }
+            @media screen and (max-width: 500px) {
                 ::ng-deep {
                     .mat-form-field {
                         width: 250px;
                     }
                 }
-              }
+            }
         }
-        // .second-grid {
-        //     display: grid;
-        //     grid-template-columns: auto auto auto;
-        //     column-gap: 10px;
-        //     ::ng-deep {
-        //         .mat-form-field {
-        //             width: 500px;
-        //         }
-        //     }
-        // }
+
         .dob {
             position: relative;
             .picker {
@@ -55,47 +53,52 @@
                 bottom: 8px;
             }
             .second-grid {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 10px;
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 500px;
+                    }
+                }
+                @media screen and (max-width: 1200px) {
                     display: grid;
-                    grid-template-columns: auto auto ;
-                    column-gap: 10px;
+                    grid-template-columns: auto;
+                }
+                @media screen and (max-width: 700px) {
                     ::ng-deep {
                         .mat-form-field {
-                            width: 500px;
+                            width: 350px;
                         }
                     }
-                    @media screen and (max-width: 1200px) {
-                        display: grid;
-                        grid-template-columns: auto  ;
-                      }
-                      @media screen and (max-width: 700px) {
-                        ::ng-deep {
-                            .mat-form-field {
-                                width: 350px;
-                            }
-                        }
-                      }
-                      @media screen and (max-width: 500px) {
-                        ::ng-deep {
-                            .mat-form-field {
-                                width: 250px;
-                            }
-                        }
-                      }
                 }
+                @media screen and (max-width: 500px) {
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
         }
-        .btn{
+        .btn {
             margin-top: 30px;
-            button{
-                background-color: #199CFF;
-                color: white;padding: 10px;
-                border: none;
-                border-radius: 5px;
+            button {
+                height: 36px;
+                width: 80px;
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), #199CFF;
+               background-blend-mode: soft-light, normal;
+               border: 1px solid rgba(150, 165, 184, 0.2);
+               box-sizing: border-box;
+               box-shadow: 0px 1px 4px rgb(0 0 0 / 12%), inset 0px 2px 0px rgb(255 255 255 / 24%);
+               border-radius: 4px;
+               color: #FFFFFF;
                 // box-shadow: 1px 0px 0px 1px rgb(195, 193, 193);
             }
         }
     }
 }
-.footer{
+.footer {
     margin-top: 30px;
     background-color: white;
     width: 100%;
@@ -105,37 +108,35 @@
         font-weight: 600;
         border-bottom: 1px solid rgb(235, 234, 234);
     }
-    .search{
+    .search {
         margin: 20px;
-        
-        span{
+
+        span {
             margin-left: 5px;
         }
         display: flex;
         justify-content: space-between;
         @media screen and (max-width: 600px) {
             display: block;
-           
-          }
+        }
     }
-    .table{
-       padding-bottom: 20px;
+    .table {
+        padding-bottom: 20px;
         margin-right: 40px;
         @media screen and (max-width: 600px) {
             width: 50%;
-           
-          }
+        }
     }
 }
-.example-full-width{
-    width: 99%;
+.example-full-width {
+    width: 95%;
 }
-::ng-deep{
-    .green-snackbar{
+::ng-deep {
+    .green-snackbar {
         background-color: green !important;
         color: #000;
     }
-    .red-snackbar{
+    .red-snackbar {
         background-color: red !important;
         color: #000;
     }

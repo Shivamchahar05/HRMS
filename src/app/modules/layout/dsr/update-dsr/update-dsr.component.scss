@@ -37,6 +37,14 @@
                         width: 320px;
                     }
                 }
+                @media screen and (max-width: 900px) {
+                    ::ng-deep {
+                        .mat-form-field {
+                            width: 280px;
+                        }
+                    }
+                }
+               
             }
             .check {
                 margin-top: 40px;
@@ -44,9 +52,30 @@
                     margin-left: 100px;
                 }
             }
+            @media screen and (max-width: 900px) {
+                display: block;
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 300px;
+                    }
+                }
+            }
         }
+        @media screen and (max-width: 900px) {
+            display: grid;
+            grid-template-columns: 100%;
+            row-gap: 20px;
+            ::ng-deep {
+                .mat-form-field {
+                    width: 300px;
+                }
+            }
+            
+        }
+        
     }
     .btn22 {
+        margin-top: 20px;
         button {
             border: none;
             background-color: green;

@@ -32,6 +32,11 @@
         .date {
             display: grid;
             grid-template-columns: 50% 50%;
+            @media screen and (max-width: 900px) {
+                display: grid;
+                grid-template-columns: 50% ;
+    }
+            
         }
     }
     .goal {

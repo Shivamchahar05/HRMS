@@ -1,23 +1,23 @@
-// $primary: #5282f0;
-// $backGroundColor: #c0d2fa;
+
 section {
+  overflow-x: scroll;
   table {
     margin: 20px;
     width: 97%;
     border: 1px solid rgb(235, 235, 235);
+    // @media screen and (max-width: 900px) {
+    //   width: 40%;
+    // }
   }
   th {
     border: 1px solid rgb(235, 235, 235);
     font-size: 15px;
     text-align: center;
-    //   color: black;
   }
   td {
-    //  background-color: rgb(235, 235, 235);
     text-align: center;
   }
   mat-icon {
-    //   color: $primary;
     margin-right: 4px;
   }
 }
@@ -31,10 +31,10 @@ section {
   .mat-18 {
     font-size: 17px;
   }
-  .pending{
-    border: 1px solid#199cff ;
+  .pending {
+    border: 1px solid#199cff;
     padding: 5px;
-    span{
+    span {
       font-size: 15px;
       color: orange;
     }
@@ -60,64 +60,70 @@ section {
   width: 100% !important;
   margin: 0px !important;
   border: none !important;
- 
+
   th {
     color: rgb(61, 61, 61);
     text-align: center;
   }
-  td{
+  td {
     text-align: start;
     background-color: #f8f7f7;
   }
-
 }
-.floating{
+.floating {
   border: none !important;
-  th{
+  th {
     border: none !important;
     border-bottom: 1px solid rgb(237, 236, 236) !important;
   }
-  td{
-        text-align: start !important;
+  td {
+    text-align: start !important;
   }
 }
-.planned{
+.planned {
   border: none !important;
-  th{
+  th {
     color: #000;
   }
-  td{
+  td {
     text-align: start;
   }
-  th,td{
+  th,
+  td {
     border: none !important;
   }
 }
-.team_size{
+.team_size {
   border: none !important;
-  // ::ng-deep{
-  //   .mat-header-row:nth-child(even){
-  //     background-color: #f2f2f2 !important;
-  //   }
-  // }
-  // tr:nth-child(even){ }
-  th{
+
+  th {
     color: #000;
   }
-  // tr:nth-child(even){
-  //   background-color: #f2f2f2 !important;
-  // }
-  td{
+  td {
     text-align: start;
   }
-  th,td{
+  th,
+  td {
     border: none !important;
   }
 }
-.dsr_css{
-  td{
+.dsr_css {
+  td {
     padding: 10px;
     text-align: start;
     border: 1px solid rgb(238, 237, 237);
+  }
+}
+.training{
+  border: none !important;
+
+  th {
+    border: none !important;
+    color: #000;
+  }
+  td {
+    border: none !important;
+    border-top: 1px solid rgb(238, 238, 238) !important;
+    text-align: start;
   }
 }

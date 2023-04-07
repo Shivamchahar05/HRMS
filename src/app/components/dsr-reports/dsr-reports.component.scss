@@ -29,6 +29,13 @@
                     width: 350px;
                 }
             }
+            @media screen and (max-width: 900px) {
+                ::ng-deep {
+                    .mat-form-field {
+                        width: 300px;
+                    }
+                }
+             }
         }
         .btn22 {
             button {
@@ -47,6 +54,14 @@
                 border: none;
             }
         }
+        @media screen and (max-width: 900px) {
+            display: block;
+            ::ng-deep {
+                .mat-form-field {
+                    width: 300px;
+                }
+            }
+         }
     }
 }
 .dsr_list{

@@ -1,6 +1,7 @@
 export const UPCOMING_TRAINING = [
     {
         training_title: 'Micro Frontend Angular',
+        process:"Enrolled",
         start_date: 'Jan-05-2023',
         end_date: 'Jan-05-2023',
         seats: '41',

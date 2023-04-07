@@ -38,6 +38,12 @@
                 }
             }
         }
+        @media screen and (max-width: 900px) {
+            .mat-form-field {
+                width: 300px;
+            }
+            
+        }
     }
     .munal_punch{
         height: 70%;
@@ -50,17 +56,12 @@
             padding-top: 10px;
             padding-left: 10px;
             padding-right: 10px;
-            // display: flex;
-            // justify-content: space-between;
-            // button{
-            //     width: 100px;
-            //     border: none;
-            //     height: 30px;
-            //     background: transparent;
-            //     -webkit-box-shadow: 0 0 0 1px #26b4ff inset;
-            //     box-shadow: 0 0 0 1px #26b4ff inset;
-            //     color: #26B4FF;
-            // }
         }
+    }
+    @media screen and (max-width: 900px) {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 20px;
+        
     }
 }

@@ -93,11 +93,15 @@
         }
     }
     .example-sidenav-container {
+        position: relative;
         flex: 1;
+    
     }
     .example-sidenav-content {
+        position: relative;
+        min-height: 100vh;
         // display: flex;
-        height: 100%;
+        // height: 100%;
         // align-items: center;
         // justify-content: space-between;
         background-color: #f4f9ff;
@@ -105,6 +109,14 @@
         padding: 30px;
         opacity: 0.9;
         color: black !important;
+        .footer{
+            background-color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0px; // bottom: 0px;
+            width: 100%;
+            // margin-top: 100%;
+        }
     }
     .mat-list-item {
         color: black;
@@ -117,6 +129,14 @@
     // background: #e51282;
     background-color: white;
     color: rgb(5, 5, 5);
+}
+::ng-deep{
+    mat-list-item{
+        // color:black !important;
+        // font-family: 'sf_ui_displaysemibold';
+        font-size: 15px !important;
+        font-weight: 500;
+    }
 }
 
 .example-toolbar {
@@ -164,27 +184,44 @@ span {
     display: flex;
     justify-content: space-between;
 }
+
 ::ng-deep {
     .mat-expansion-panel {
         box-shadow: none !important;
     }
-    .mat-list-item span {
+    mat-list-item{
         font-size: 15px;
+    }
+    .mat-list-item span {
+        // color:black !important;
+        font-family: 'sf_ui_displaysemibold';
+        font-size: 15px;
+        font-weight: 600;
         // color: #2c2c2c;
     }
-    .mat-list-base .mat-list-item .mat-list-icon,
-    .mat-list-base .mat-list-option .mat-list-icon {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        font-size: 24px;
-        box-sizing: content-box;
-        border-radius: 50%;
-        padding: 4px;
-    }
+    // .mat-list-base .mat-list-item .mat-list-icon,
+    // .mat-list-base .mat-list-option .mat-list-icon {
+    //     flex-shrink: 0;
+    //     width: 24px;
+    //     height: 24px;
+    //     // font-size: 24px;
+    //     box-sizing: content-box;
+    //     border-radius: 50%;
+    //     padding: 4px;
+        
+    // }
 }
 .new-menu {
     margin-left: 5px;
     color: red;
     animation: rotation 4s infinite cubic-bezier(0.89, -0.4, 0.02, 1.3) !important;
 }
+.footer{
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px; // bottom: 0px;
+    width: 100%;
+    // margin-top: 100%;
+}
+

@@ -1,0 +1,41 @@
+<div class="main">
+    <h3>Training Details</h3>
+    <div class="detail">
+        <div>
+            <label>Title:</label>
+            <span>{{details_tarining.training_title}}</span>
+        </div>
+        <div class="dates">
+            <div>
+                <div>
+                    <label>Start dates:</label>
+                    <span>{{details_tarining.start_date}}</span>
+                </div>
+                <div>
+                    <label>Training mode :</label>
+                    <span>{{details_tarining.mode}}</span>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <label>End dates :</label>
+                    <span>{{details_tarining.end_date}}</span>
+                </div>
+                <div>
+                    <label>Batch :</label>
+                    <span>Feb-2022</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Description</h3>
+    <div class="Description">
+        <h4>{{details_tarining.training_title}}- uploaded from sheet</h4>
+    </div>
+    <h3>Topics</h3>
+    <div>
+        <app-table [columns]="headings" [dataSource]="datasource" [TableClass]="'training'"></app-table>
+    </div>
+</div>
+

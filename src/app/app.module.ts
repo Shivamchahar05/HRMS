@@ -14,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 // import { MatSelectModule } from '@angular/material/select';
 import {MatSelectModule} from '@angular/material/select';
 import { CancelEnrollComponent } from './dialogs/cancel-enroll/cancel-enroll.component';
+import { HelpDialogComponent } from './dialogs/help-dialog/help-dialog.component';
+import { RequestTrainingComponent } from './dialogs/request-training/request-training.component';
 
 
 
@@ -24,6 +26,8 @@ import { CancelEnrollComponent } from './dialogs/cancel-enroll/cancel-enroll.com
     AppComponent,
     PageNotFoundComponent,
     CancelEnrollComponent,
+    HelpDialogComponent,
+    RequestTrainingComponent,
    
    
   ],

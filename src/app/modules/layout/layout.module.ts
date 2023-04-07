@@ -11,6 +11,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TableComponent } from 'src/app/common_table/table/table.component';
 import { QualificationModule } from './myprofile/qualification/qualification.module';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     LayoutComponent
@@ -23,7 +25,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatListModule,
     MatToolbarModule,
     MatMenuModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
     
   ]
 })

@@ -9,6 +9,7 @@ export class JobDetailsService {
   job_detals:any
   dsr_details:any
   count_images:any
+  training_details:any
 
   convert(str:any) {
     var date = new Date(str),

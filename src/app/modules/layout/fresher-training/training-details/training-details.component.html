@@ -1,0 +1,24 @@
+<div class="main">
+    <div>
+        <span>Home</span>
+        <span> / My Trainings / Details</span>
+    </div>
+    <div class="title">
+        <h1>{{details_tarining.training_title}}</h1>
+    </div>
+    <div class="center">
+        <div class="header">
+            <div class="btn22">
+                <button routerLink="/layout/training-details/training-details-under" routerLinkActive="active">Training Details</button>
+                <button routerLink="/layout/training-details/sub-topics" routerLinkActive="active">Sub-Topics</button>
+                <button routerLink="/layout/training-details/attendance" routerLinkActive="active">Attendance</button>
+            </div>
+            <div>
+                <h3><mat-icon>brightness_1</mat-icon>Complete</h3>
+            </div>
+        </div>
+        <div class="details">
+         <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -28,5 +28,11 @@ export class MyTrainingComponent implements OnInit {
       // this.name = result;
     });
   }
+  traing_detail(data:any){
+    this.route.navigate(['/layout/training-details'])
+    this.jobdetails.training_details=data
+    console.log(data,'data');
+    
+  }
 
 }

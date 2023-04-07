@@ -12,7 +12,7 @@
                 </div>
                 <div class="tittle">
                     <h2>{{training.training_title}}</h2>
-                    <!-- <p>{{training.process}}</p> -->
+                    <p *ngIf="!enroll_training">{{training.process}}</p>
                 </div>
                 <hr>
                 <div class="attend">

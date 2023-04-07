@@ -1,9 +1,11 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { delay, filter } from 'rxjs';
 import { SIDE_NAV_ITEM } from 'src/app/constants/side_nav_links';
+import { HelpDialogComponent } from 'src/app/dialogs/help-dialog/help-dialog.component';
 
 @Component({
   selector: 'app-layout',
@@ -20,7 +22,7 @@ export class LayoutComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
   // element: HTMLElement;
-  constructor(private observer: BreakpointObserver,private router: Router,private route:Router) { }
+  constructor(private observer: BreakpointObserver,private router: Router,private route:Router,public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.items = SIDE_NAV_ITEM
@@ -66,5 +68,13 @@ export class LayoutComponent implements OnInit {
   my_profile(){
     this.route.navigate(['/layout/my-profile'])
   }
+  openDialog() {
+    const dialogRef = this.dialog.open(HelpDialogComponent);
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
+
+

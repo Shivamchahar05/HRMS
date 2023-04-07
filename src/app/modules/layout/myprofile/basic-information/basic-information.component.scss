@@ -9,6 +9,13 @@
     }
     .Input-fields {
         padding: 25px;
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Segoe UI";
+            color: #2f3031;
+            margin-bottom: 5px;
+        }
         .first-grid {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -20,19 +27,19 @@
             }
             @media screen and (max-width: 1200px) {
                 display: grid;
-                grid-template-columns: auto auto ;
-              }
-              @media screen and (max-width: 900px) {
+                grid-template-columns: auto auto;
+            }
+            @media screen and (max-width: 900px) {
                 display: grid;
-                grid-template-columns: auto ;
-              }
-              @media screen and (max-width: 600px) {
+                grid-template-columns: auto;
+            }
+            @media screen and (max-width: 600px) {
                 ::ng-deep {
                     .mat-form-field {
                         width: 280px;
                     }
                 }
-              }
+            }
         }
         .dob {
             position: relative;
@@ -51,30 +58,29 @@
                 .mat-form-field {
                     width: 366px;
                     .mat-select {
-                        .mat-input{
-                        border: 1px solid;
+                        .mat-input {
+                            border: 1px solid;
                         }
                     }
                 }
-                
             }
             @media screen and (max-width: 1200px) {
                 display: grid;
-                grid-template-columns: auto auto ;
-              }
-              @media screen and (max-width: 900px) {
+                grid-template-columns: auto auto;
+            }
+            @media screen and (max-width: 900px) {
                 display: grid;
-                grid-template-columns: auto ;
-              }
-              @media screen and (max-width: 600px) {
+                grid-template-columns: auto;
+            }
+            @media screen and (max-width: 600px) {
                 ::ng-deep {
                     .mat-form-field {
                         width: 280px;
                     }
                 }
-              }
+            }
         }
-        .third_grid{
+        .third_grid {
             display: grid;
             grid-template-columns: auto auto;
             column-gap: 10px;
@@ -83,19 +89,19 @@
                     width: 265px;
                 }
             }
-            .years{
+            .years {
                 display: grid;
                 grid-template-columns: auto auto;
                 column-gap: 10px;
                 @media screen and (max-width: 900px) {
                     display: grid;
-                    grid-template-columns: auto ;
-                  }
+                    grid-template-columns: auto;
+                }
             }
             @media screen and (max-width: 1200px) {
                 display: grid;
-                grid-template-columns: auto ;
-              }
+                grid-template-columns: auto;
+            }
             //   @media screen and (max-width: 600px) {
             //     ::ng-deep {
             //         .mat-form-field {
@@ -104,11 +110,12 @@
             //     }
             //   }
         }
-        .btn{
+        .btn {
             margin-top: 30px;
-            button{
-                background-color: #199CFF;
-                color: white;padding: 10px;
+            button {
+                background-color: #199cff;
+                color: white;
+                padding: 10px;
                 border: none;
                 border-radius: 5px;
                 // box-shadow: 1px 0px 0px 1px rgb(195, 193, 193);
@@ -116,15 +123,15 @@
         }
     }
 }
-.example-full-width{
+.example-full-width {
     width: 99%;
 }
-::ng-deep{
-    .green-snackbar{
+::ng-deep {
+    .green-snackbar {
         background-color: green !important;
         color: #000;
     }
-    .red-snackbar{
+    .red-snackbar {
         background-color: red !important;
         color: #000;
     }

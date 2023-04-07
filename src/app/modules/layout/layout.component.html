@@ -9,7 +9,7 @@
                     <h1 *ngIf="isExpanded">appinventiv</h1>
                     <div>
                         <mat-toolbar class="example-toolbar">
-                                <mat-icon (click)="isExpanded = !isExpanded">menu</mat-icon>
+                            <mat-icon (click)="isExpanded = !isExpanded">menu</mat-icon>
                         </mat-toolbar>
                     </div>
                 </a>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="btn-help">
-                <button>Help</button>
+                <button (click)="openDialog()">Help</button>
             </div>
             <div class="notification">
                 <mat-icon>notifications</mat-icon>
@@ -57,7 +57,7 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                     </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle disabled >
+                    <mat-expansion-panel hideToggle disabled>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <mat-list-item class="parent" routerLink="/layout/my-profile" routerLinkActive="active">
@@ -84,14 +84,16 @@
                             [ngClass]="{'open': panel1.expanded== false ,'close':panel1.expanded==true }">
                             <mat-panel-title>
                                 <mat-list-item class="parent">
-                                    <span class="full-width" *ngIf="isExpanded || isShowing" routerLinkActive="active">Entrepreneurship
+                                    <span class="full-width" *ngIf="isExpanded || isShowing"
+                                        routerLinkActive="active">Entrepreneurship
                                         <br>Program</span>
                                     <mat-icon mat-list-icon>payments</mat-icon>
                                     <i class="new-menu fas fa-certificate" *ngIf="isExpanded || isShowing"></i>
                                 </mat-list-item>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <div *ngIf="isExpanded || isShowing" routerLink="/layout/Entrepreneurship_Program" routerLinkActive="active">
+                        <div *ngIf="isExpanded || isShowing" routerLink="/layout/Entrepreneurship_Program"
+                            routerLinkActive="active">
                             <mat-list-item>Explore</mat-list-item>
                         </div>
                     </mat-expansion-panel>
@@ -106,10 +108,13 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/insurence-verification" routerLinkActive="active">Insurence verification<br>Details
+                            <mat-list-item routerLink="/layout/insurence-verification" routerLinkActive="active">
+                                Insurence verification<br>Details
                             </mat-list-item>
-                            <mat-list-item routerLink="/layout/holiday-calender" routerLinkActive="active">Holiday Calender 2023</mat-list-item>
-                            <mat-list-item routerLink="/layout/policy-document" routerLinkActive="active">Policy Documents</mat-list-item>
+                            <mat-list-item routerLink="/layout/holiday-calender" routerLinkActive="active">Holiday
+                                Calender 2023</mat-list-item>
+                            <mat-list-item routerLink="/layout/policy-document" routerLinkActive="active">Policy
+                                Documents</mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel3>
@@ -123,10 +128,16 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <a href="https://hrms.easysourceindia.com/Payroll/"><mat-list-item routerLinkActive="active">Salary Slip</mat-list-item></a>
-                            <a href="https://hrms.easysourceindia.com/Payroll/"><mat-list-item  routerLinkActive="active">Form 16</mat-list-item></a>
-                            <a href="https://hrms.easysourceindia.com/Payroll/"><mat-list-item  routerLinkActive="active">Investment Declaration
-                            </mat-list-item></a>
+                            <a href="https://hrms.easysourceindia.com/Payroll/">
+                                <mat-list-item routerLinkActive="active">Salary Slip</mat-list-item>
+                            </a>
+                            <a href="https://hrms.easysourceindia.com/Payroll/">
+                                <mat-list-item routerLinkActive="active">Form 16</mat-list-item>
+                            </a>
+                            <a href="https://hrms.easysourceindia.com/Payroll/">
+                                <mat-list-item routerLinkActive="active">Investment Declaration
+                                </mat-list-item>
+                            </a>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -139,7 +150,8 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/my-performance" routerLinkActive="active">My Performence</mat-list-item>
+                            <mat-list-item routerLink="/layout/my-performance" routerLinkActive="active">My Performence
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -152,8 +164,10 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/job-opening" routerLinkActive="active">Job Opening</mat-list-item>
-                            <mat-list-item routerLink="/layout/referral-list" routerLinkActive="active">Referral list</mat-list-item>
+                            <mat-list-item routerLink="/layout/job-opening" routerLinkActive="active">Job Opening
+                            </mat-list-item>
+                            <mat-list-item routerLink="/layout/referral-list" routerLinkActive="active">Referral list
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -162,11 +176,12 @@
                                 <mat-list-item class="parent">
                                     <span class="full-width" *ngIf="isExpanded || isShowing">Recruitment</span>
                                     <mat-icon mat-list-icon>reviews</mat-icon>
-                                </mat-list-item>    
+                                </mat-list-item>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/My Interview" routerLinkActive="active">My Interview</mat-list-item>
+                            <mat-list-item routerLink="/layout/My Interview" routerLinkActive="active">My Interview
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -179,7 +194,8 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/my-training" routerLinkActive="active">My Training</mat-list-item>
+                            <mat-list-item routerLink="/layout/my-training" routerLinkActive="active">My Training
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -192,10 +208,14 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/upcoming_training" routerLinkActive="active">Upcoming Training</mat-list-item>
-                            <mat-list-item routerLink="/layout/ongoing_training" routerLinkActive="active">Ongoing Training</mat-list-item>
-                            <mat-list-item routerLink="/layout/my_training" routerLinkActive="active">My Training</mat-list-item>
-                            <mat-list-item routerLink="/layout/requested-training" routerLinkActive="active"> Requested Training</mat-list-item>
+                            <mat-list-item routerLink="/layout/upcoming_training" routerLinkActive="active">Upcoming
+                                Training</mat-list-item>
+                            <mat-list-item routerLink="/layout/ongoing_training" routerLinkActive="active">Ongoing
+                                Training</mat-list-item>
+                            <mat-list-item routerLink="/layout/my_training" routerLinkActive="active">My Training
+                            </mat-list-item>
+                            <mat-list-item routerLink="/layout/requested-training" routerLinkActive="active"> Requested
+                                Training</mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -208,9 +228,12 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/my-assets-inventory" routerLinkActive="active">My Assets Inventory</mat-list-item>
-                            <mat-list-item routerLink="/layout/request-asset" routerLinkActive="active">Request Assets</mat-list-item>
-                            <mat-list-item routerLink="/layout/asset-declaration" routerLinkActive="active">Asset Declaration</mat-list-item>
+                            <mat-list-item routerLink="/layout/my-assets-inventory" routerLinkActive="active">My Assets
+                                Inventory</mat-list-item>
+                            <mat-list-item routerLink="/layout/request-asset" routerLinkActive="active">Request Assets
+                            </mat-list-item>
+                            <mat-list-item routerLink="/layout/asset-declaration" routerLinkActive="active">Asset
+                                Declaration</mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -223,9 +246,12 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/attendance-calender" routerLinkActive="active">Attendance Calender</mat-list-item>
-                            <mat-list-item routerLink="/layout/manual-punch" routerLinkActive="active">Manual Punch</mat-list-item>
-                            <mat-list-item routerLink="/layout/punch-log" routerLinkActive="active">Punch Log</mat-list-item>
+                            <mat-list-item routerLink="/layout/attendance-calender" routerLinkActive="active">Attendance
+                                Calender</mat-list-item>
+                            <mat-list-item routerLink="/layout/manual-punch" routerLinkActive="active">Manual Punch
+                            </mat-list-item>
+                            <mat-list-item routerLink="/layout/punch-log" routerLinkActive="active">Punch Log
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -238,8 +264,10 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
-                            <mat-list-item routerLink="/layout/my-leave" routerLinkActive="active">My Leave</mat-list-item>
-                            <mat-list-item routerLink="/layout/floating-leave" routerLinkActive="active">Floating leave</mat-list-item>
+                            <mat-list-item routerLink="/layout/my-leave" routerLinkActive="active">My Leave
+                            </mat-list-item>
+                            <mat-list-item routerLink="/layout/floating-leave" routerLinkActive="active">Floating leave
+                            </mat-list-item>
                         </div>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -266,20 +294,20 @@
                         </mat-expansion-panel-header>
                         <div *ngIf="isExpanded || isShowing">
                             <mat-list-item routerLink="/layout/my-dsr" routerLinkActive="active">My DSR</mat-list-item>
-                            
+
                         </div>
                     </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel>
                         <mat-expansion-panel-header routerLink="/layout/project" routerLinkActive="active">
                             <mat-panel-title>
-                                <mat-list-item class="parent" >
+                                <mat-list-item class="parent">
                                     <span class="full-width" *ngIf="isExpanded || isShowing">Project</span>
                                     <mat-icon mat-list-icon>terminal</mat-icon>
                                 </mat-list-item>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                     </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel hideToggle disabled>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <mat-list-item class="parent">
@@ -289,7 +317,7 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                     </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel hideToggle disabled>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <mat-list-item class="parent">
@@ -299,7 +327,7 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                     </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel hideToggle disabled>
                         <mat-expansion-panel-header>
                             <mat-panel-title>
                                 <mat-list-item class="parent">
@@ -310,7 +338,7 @@
                         </mat-expansion-panel-header>
                     </mat-expansion-panel>
                     <mat-expansion-panel hideToggle>
-                        <mat-expansion-panel-header>
+                        <mat-expansion-panel-header routerLink="/account/login" routerLinkActive="active">
                             <mat-panel-title>
                                 <mat-list-item class="parent">
                                     <span class="full-width" *ngIf="isExpanded || isShowing">Logout</span>
@@ -328,7 +356,12 @@
 
         <div class="example-sidenav-content">
             <router-outlet></router-outlet>
-        </div>
 
+            <!-- <div class="footer">
+                <h4>2023 © Appinventiv HR System v1.0.6</h4>
+            </div> -->
+        </div>
+        
     </mat-sidenav-container>
+    
 </div>
